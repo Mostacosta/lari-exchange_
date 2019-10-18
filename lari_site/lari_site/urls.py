@@ -15,12 +15,35 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import currency_table,home_view
+from home.views import currency_table,home_view,change_lang
 from django.conf.urls.static import static
 from django.conf import settings
+from contact.views import contact_view
+from about.views import about_view
+from ceo.views import ceo_view
+from missionsandvision.views import mission_view
+from products.views import products_view,products_detail_view
+from technology.views import technology_view
+from faq.views import questions_view
+from partners.views import partner_view
+from news.views import news_view,news_details_view
+from rates.views import rates_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name="home"),
+    path('contact',contact_view,name="contact"),
+    path('about',about_view,name="about"),
+    path('ceo',ceo_view,name="ceo"),
+    path('mission',mission_view,name="mission"),
+    path('products',products_view,name="products"),
+    path('technology',technology_view,name="technology"),
+    path ('faq',questions_view,name='faq'),
+    path ('partner',partner_view,name='partner'),
+    path('news',news_view,name='news'),
+    path('news/<int:pk>',news_details_view,name='news_details'),
+    path('product/<int:pk>',products_detail_view,name='product_detail'),
+    path('rates',rates_view,name='rates'),
+    path('lang',change_lang,name='lang')
 
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

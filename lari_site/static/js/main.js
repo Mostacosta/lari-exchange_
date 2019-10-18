@@ -34,6 +34,4 @@ $(document).ready(function () {
   }, function () {
     $(this).children(".sub-menu").removeClass("submenu-opened");
   });
-
-
 });

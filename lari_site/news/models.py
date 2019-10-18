@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class news_master (models.Model):
     image = models.ImageField(upload_to="news")
@@ -11,7 +11,7 @@ class news_master (models.Model):
 
 class news_detail (models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = RichTextField()
     language = (('eng','eng'),
                    ('ar','ar')
     )

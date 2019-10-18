@@ -16,6 +16,10 @@ class slider_detail (models.Model):
     tag = models.CharField(max_length=5,choices=language,default='eng')
     master = models.ForeignKey(slider_image,on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.title
+
+
 class paymentcard_master(models.Model):
     image = models.ImageField(upload_to="paymentcard")
 

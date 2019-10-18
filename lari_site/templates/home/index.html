@@ -37,21 +37,21 @@ function changeAmount(){
         $('#second').attr('value', data.result)
      }});
 }
-
  </script>
 </head>
 
 <body>
+    {%if request.session.lang == "eng"%}
     <!-- START LARI HEADER -->
     <header id="lari-header" class="w-100">
         <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{%url 'home'%}">
                 <img src="{%static 'images/logo-1.png'%}" alt="Lari Exchange">
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="ml-auto my-2 my-lg-0 d-flex align-items-center">
                     <div class="language-switcher dis-inline">
-                        <a href="index-ar.html">عربي<i class="fas fa-globe"></i></a>
+                        <a href="{%url 'lang'%}">عربي<i class="fas fa-globe"></i></a>
                     </div>
                     <div class="dis-inline">
                         <div id="toggle" class="button_container">
@@ -66,7 +66,8 @@ function changeAmount(){
             </div>
         </nav>
     </header>
-
+    {%else%}
+    {%endif%}
     <!-- Start LARI CAROUSEL -->
     <section id="lari-carousel">
         <div id="main-slider" class="carousel slide" data-ride="carousel">
@@ -84,14 +85,14 @@ function changeAmount(){
                 <div class="carousel-item active " style=" background-image: url({{slider.master.image.url}});">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Travelflex Card</h5>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">{{slider.description}}</p>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">{{slider.description|safe}}</p>
                     </div>
                 </div>
                 {%else%}
                 <div class="carousel-item" style=" background-image: url({{slider.master.image.url}});">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">{{slider.title}}</h5>
-                            <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">{{slider.description}}</p>
+                            <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">{{slider.description|safe}}</p>
                         </div>
                     </div>
                 {%endif%}
@@ -219,16 +220,17 @@ function changeAmount(){
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-title">{{new.title}}</h5>
-                                            <p class="card-text">{{new.description}}
+                                            <p class="card-text">{{new.description|safe}}
                                             </p>
                                             <p class="card-text pull-left"><small class="text-muted">{{new.master.date}}</small>
                                             </p>
-                                            <a href="#" class="pull-right"><i class="fas fa-chevron-right"></i></a>
+                                            <a href="{%url 'news_details' pk=new.pk %}" class="pull-right"><i class="fas fa-chevron-right"></i></a>
                                         </div>
                                     </div>
-                                    {%endfor%}
+                                    
                                 </div>
                             </div>
+                            {%endfor%}
                         </div>
                     </div>
                 </div>
@@ -240,8 +242,8 @@ function changeAmount(){
         <div class="container">
             <div class="paymax-content col-6">
                 <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{pay.title}}</h6>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{pay.description}}</p>
-                <a href="#" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{pay.description|safe}}</p>
+                <a href="{%url 'product_detail' pk=1 %}" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                     data-wow-delay=".5s">Read More</a>
             </div>
         </div>
@@ -270,9 +272,9 @@ function changeAmount(){
                                 <h4 class="card-title"><a>{{product.title}}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{{product.description}}</p>
+                                <p class="card-text">{{product.description|safe}}</p>
                                 <!-- Button -->
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <a href="{%url 'product_detail' pk=product.pk %}" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
                         <!-- Card -->
@@ -282,7 +284,7 @@ function changeAmount(){
             </div>
         </div>
     </section>
-
+    {%if request.session.lang == "eng"%}
     <!-- START FOOTER -->
     <footer id="lari-footer">
         <div class="container">
@@ -290,7 +292,7 @@ function changeAmount(){
                 <div class="col-md-4">
                     <div class="about-footer">
                         <div class="white-logo">
-                            <img src="images/logo-1-wht.png" alt="" class="wow fadeInUp" data-wow-duration="1s"
+                            <img src="{% static 'images/logo-1-wht.png' %}" alt="" class="wow fadeInUp" data-wow-duration="1s"
                                 data-wow-delay="0s">
                         </div>
                         <p class="about-footer-desc wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
@@ -347,31 +349,34 @@ function changeAmount(){
             </div>
         </div>
     </footer>
+   
     <div class="overlay" id="overlay">
+        <div class="menu-logo">
+            <img src="{% static 'images/logo-1-wht.png'%}" alt="">
+        </div>
         <nav class="overlay-menu">
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li class="active"><a href="{%url 'home'%}">Home</a></li>
                 <li class="hoverzone">
-                    <a href="#">Product & Services</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">FOREX</a></li>
-                        <li><a href="#">Remittances</a></li>
-                        <li class="active"><a href="#">Bill Payments</a></li>
-                        <li><a href="#">Inter Emirates transfer</a></li>
-                        <li><a href="#">Credit Card Cash Advance</a></li>
-                        <li><a href="#">Money Products</a></li>
-                        <li><a href="#">Payroll</a></li>
-                        <li><a href="#">Prepaid cards</a></li>
-                        <li><a href="#">Delivery Channels</a></li>
+                    <a href="{%url 'about'%}">About</a>
+                    <ul class="sub-menu about-submenu">
+                        <li><a href="{%url 'ceo'%}">Message from CEO</a></li>
+                        <li><a href="{%url 'mission'%}">Mission & Vision</a></li>
+                        <li class="active"><a href="{%url 'technology'%}">Technology</a></li>
+                        <li><a href="{%url 'partner'%}">Partners</a></li>
                     </ul>
                 </li>
-                <li><a href="#">PROMOTIONS & NEWS</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Careers</a></li>
+                <li class="hoverzone">
+                    <a href="{%url 'products'%}">Product & Services</a>
+                </li>
+                <li><a href="{%url 'news'%}">PROMOTIONS & NEWS</a></li>
+                <li><a href="{%url 'contact'%}">Contact</a></li>
+                <li><a href="{%url 'faq'%}">FAQ</a></li>
             </ul>
         </nav>
     </div>
+    {%else%}
+    {%endif%}
     <!-- start the script -->
 
     <script src="{%static 'js/jquery-3.4.1.min.js'%}"></script>

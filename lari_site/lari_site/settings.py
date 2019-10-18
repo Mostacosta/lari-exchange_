@@ -27,7 +27,7 @@ SECRET_KEY = 'vh2_k25s2v7u%t*g+271#k1woaa8f@net-_wwy_&r4zn3w5f4k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://interface.pythonanywhere.com/']
 
 
 # Application definition
@@ -42,6 +42,15 @@ INSTALLED_APPS = [
     'home',
     'news',
     'products',
+    'contact',
+    'about',
+    'ceo',
+    'missionsandvision',
+    'technology',
+    'faq',
+    'partners',
+    'rates',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +133,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
