@@ -27,7 +27,7 @@ SECRET_KEY = 'vh2_k25s2v7u%t*g+271#k1woaa8f@net-_wwy_&r4zn3w5f4k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://interface.pythonanywhere.com/']
+ALLOWED_HOSTS = ['interface.pythonanywhere.com']
 
 
 # Application definition
@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'partners',
     'rates',
     'ckeditor',
+    'atm',
+    'branches'
 ]
 
 MIDDLEWARE = [

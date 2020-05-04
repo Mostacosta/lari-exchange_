@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </nav>
         </header>
@@ -63,7 +63,7 @@
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Forex</li>
                         </ol>
                     </nav>
@@ -85,7 +85,7 @@
                             <h2 class="sidebar-title">All Services</h2>
                             <ul>
                                 {%for prod in products%}
-                                {%if forloop.first%}
+                                {%if prod.pk == product.pk %}
                                 <li class="active"><a href="{%url 'product_detail' pk=prod.pk %}">{{prod.title}}</a></li>
                                 {%else%}
                                 <li ><a href="{%url 'product_detail' pk=prod.pk %}">{{prod.title}}</a></li>
@@ -145,72 +145,86 @@
                         <div class="useful-links">
                             <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".75s">Useful Links</h6>
                             <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                                <li>Privacy & Policy</li>
-                                <li>Terms of use</li>
-                                <li>Terms & Conditions</li>
-                                <li>Charge List</li>
-                                <li>FAQ</li>
-                                <li>Contact us</li>
+                                <li><a href="{%url 'privacy'%}">Privacy & Policy</a></li>
+                            <li><a href="{%url 'use'%}">Terms of use</a></li>
+                            <li><a href = "{%url 'condition'%}">Terms & Conditions</a></li>
+                            <li><a href="">Charge List</a></li>
+                            <li><a href="{%url 'faq'%}">FAQ</a></li>
+                            <li><a href="{%url 'contact'%}">Contact us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="download-app-social">
-                            <div class="download">
-                                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.25s">Download Our App</h6>
-                                <div class="download-stores wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
-                                    <div class="stores">
-                                        <a href="#"><img src="{%static 'images/App-img/appstore.png'%}" alt=""></a>
-                                    </div>
-                                    <div class="stores">
-                                        <a href="#"><img src="{% static 'images/App-img/android.png'%}" alt=""></a>
-                                    </div>
+                <div class="col-md-5">
+                    <div class="download-app-social">
+                        <div class="download">
+                            <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.25s">Download Our App</h6>
+                            <div class="download-stores wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                                <div class="stores">
+                                    <a href="https://apps.apple.com/ae/app/paymax/id951789652"><img src="{%static 'images/App-img/appstore.png'%}" alt=""></a>
+                                </div>
+                                <div class="stores">
+                                    <a href="https://play.google.com/store/apps/details?id=ae.s4m.paymax"><img src="{% static 'images/App-img/android.png'%}" alt=""></a>
                                 </div>
                             </div>
-                            <div class="social-media">
-                                <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.75s"><i
-                                        class="fab fa-facebook-square"></i></a>
-                                <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s"><i
-                                        class="fab fa-twitter-square"></i></a>
-                                <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.25s"><i
-                                        class="fab fa-youtube-square"></i></a>
-                                <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="copyright">
-                                <p>© Copyrights 2019 Lari Exchange.</p>
-                            </div>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.75s"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.25s"><i
+                                    class="fab fa-youtube-square"></i></a>
+                            <a href="https://www.instagram.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="copyright">
+                            <p>© Copyrights 2020 Lari Exchange.</p>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </footer>
-       
-        <div class="overlay" id="overlay">
-            <div class="menu-logo">
-                <img src="{% static 'images/logo-1-wht.png'%}" alt="">
-            </div>
-            <nav class="overlay-menu">
-                <ul>
-                    <li class="active"><a href="{%url 'home'%}">Home</a></li>
-                    <li class="hoverzone">
-                        <a href="{%url 'about'%}">About</a>
-                        <ul class="sub-menu about-submenu">
-                            <li><a href="{%url 'ceo'%}">Message from CEO</a></li>
-                            <li><a href="{%url 'mission'%}">Mission & Vision</a></li>
-                            <li class="active"><a href="{%url 'technology'%}">Technology</a></li>
-                            <li><a href="{%url 'partner'%}">Partners</a></li>
-                        </ul>
-                    </li>
-                    <li class="hoverzone">
-                        <a href="{%url 'products'%}">Product & Services</a>
-                    </li>
-                    <li><a href="{%url 'news'%}">PROMOTIONS & NEWS</a></li>
-                    <li><a href="{%url 'contact'%}">Contact</a></li>
-                    <li><a href="{%url 'faq'%}">FAQ</a></li>
-                </ul>
-            </nav>
+
+    <div class="overlay" id="overlay">
+        <div class="menu-logo">
+            <img src="{% static 'images/logo-1-wht.png'%}" alt="">
         </div>
+        <nav class="overlay-menu">
+            <ul>
+                <li class=><a href="{%url 'home'%}">Home</a></li>
+                <li class="hoverzone">
+                    <a href="{%url 'aboutmain'%}">About</a>
+                    <ul class="sub-menu about-submenu">
+                        <li><a href="{%url 'ceo'%}">Message from CEO</a></li>
+                        <li><a href="{%url 'mission'%}">Mission & Vision</a></li>
+                        <li class="active"><a href="{%url 'technology'%}">Technology</a></li>
+                        <li><a href="{%url 'partner'%}">Partners</a></li>
+                    </ul>
+                </li>
+                <li class="hoverzone">
+                    <a href="{%url 'products'%}">Product & Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">FOREX</a></li>
+                        <li><a href="#">Remittances</a></li>
+                        <li class="active"><a href="#">Bill Payments</a></li>
+                        <li><a href="#">Inter Emirates transfer</a></li>
+                        <li><a href="#">Credit Card Cash Advance</a></li>
+                        <li><a href="#">Money Products</a></li>
+                        <li><a href="#">Payroll</a></li>
+                        <li><a href="#">Prepaid cards</a></li>
+                        <li><a href="#">Delivery Channels</a></li>
+                    </ul>
+                </li>
+                <li><a href="{%url 'news'%}">Promotions & News</a></li>
+                <li><a href="{%url 'contact'%}">Contact us</a></li>
+                <li><a href="{%url 'faq'%}">FAQ</a></li>
+                <li class=><a href="{%url 'branches'%}">Branches</a></li>
+                <li class=><a href="{%url 'atm'%}">ATM</a></li>
+                <li class=><a href="{%url 'jobs'%}">Careers</a></li>
+            </ul>
+        </nav>
+    </div>
         {%else%}
         {%endif%}
     <!-- start the script -->

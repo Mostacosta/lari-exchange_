@@ -18,7 +18,7 @@ from django.urls import path
 from home.views import currency_table,home_view,change_lang
 from django.conf.urls.static import static
 from django.conf import settings
-from contact.views import contact_view
+from contact.views import contact_view,job_view
 from about.views import about_view
 from ceo.views import ceo_view
 from missionsandvision.views import mission_view
@@ -28,6 +28,9 @@ from faq.views import questions_view
 from partners.views import partner_view
 from news.views import news_view,news_details_view
 from rates.views import rates_view
+from django.views.generic import TemplateView
+from branches.views import branch_view
+from atm.views import atm_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,6 +47,13 @@ urlpatterns = [
     path('news/<int:pk>',news_details_view,name='news_details'),
     path('product/<int:pk>',products_detail_view,name='product_detail'),
     path('rates',rates_view,name='rates'),
-    path('lang',change_lang,name='lang')
+    path('lang',change_lang,name='lang'),
+    path('privacy', TemplateView.as_view(template_name='footer/privacy-policy.html'),name='privacy'),
+    path('termscondition', TemplateView.as_view(template_name='footer/terms-conditions.html'),name='condition'),
+    path('termsuse', TemplateView.as_view(template_name='footer/terms-use.html'),name='use'),
+    path('branches',branch_view,name='branches'),
+    path('atm',atm_view,name='atm'),
+    path('careers',job_view,name='jobs'),
+    path('aboutmain', TemplateView.as_view(template_name='about/about-main.html'),name='aboutmain')
 
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -40,7 +40,7 @@ def home_view(request):
             response_data['result']= result
             return JsonResponse(response_data)
 
-    return render(request,'home/index.html',{"sliders":sliders,"news":news,"pay":payment[0],"products":products,"form":cal})
+    return render(request,'home/index.html',{"sliders":sliders,"news":news,"pay":payment[0],"products":products[:3],"form":cal})
 
 def change_lang (request):
     lang = request.session.get('lang')

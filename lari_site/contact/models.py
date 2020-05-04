@@ -25,3 +25,9 @@ class contact_form (models.Model):
     def __str__(self):
         return self.name
     
+
+class jobs (models.Model):
+    job_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.job_name

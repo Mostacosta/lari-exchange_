@@ -104,115 +104,18 @@ function changeAmount(){
     <section id="lari-currency-news">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="rates-calc">
-                        <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Today's Rates</h6>
-                        <span>( Last Updated On Monday, 03 at 8:30pm )</span>
+
                         <!--Table-->
-                        <div class="today-rates-table">
-                            <table id="tablePreview" class="table table-striped">
-                                <!--Table head-->
-                                <thead class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
-                                    <tr>
-                                        <th>Currency</th>
-                                        <th>Transfer</th>
-                                        <th>Cash Buy</th>
-                                        <th>Cash Sell</th>
-                                    </tr>
-                                </thead>
-                                <!--Table head-->
-                                <!--Table body-->
-                                <tbody class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <tr>
-                                        <td>USD</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AED</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>EURO</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SAR</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>EGP</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Riyal</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dinar</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                        <td>3.26</td>
-                                    </tr>
-                                </tbody>
-                                <!--Table body-->
-                            </table>
-                        </div>
-                        <!--Table-->
-                        <div class="currency-calc">
-                            <span>LIVE</span>
-                            <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Currency Calculator</h6>
-                            <div class="from-to-currency">
-                                <form method="POST">
-                                        {% csrf_token %}
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter amount" class="wow fadeInUp"
-                                            data-wow-duration="1s" data-wow-delay="0s" name="first_amount" id="first" onkeyup="changeAmount()" >
-                                        <select name="" id="first_cur" class="wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay=".25s" name="first_currency" onchange="changeAmount()">
-                                            <option value="USD">USD</option>
-                                            <option value="AED">AED</option>
-                                            <option value="SAR">SAR</option>
-                                            <option value="EUR">EUR</option>
-                                            <option value="EGP">EGP</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Converted amount" class="wow fadeInUp"
-                                            data-wow-duration="1s" data-wow-delay=".5s" name="second_amount" value="" id="second" readonly>
-                                        <select name="" id="second_cur" class="wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="1s" name="second_currency" onchange="changeAmount()">
-                                            <option value="USD">USD</option>
-                                            <option value="AED">AED</option>
-                                            <option value="SAR">SAR</option>
-                                            <option value="EUR">EUR</option>
-                                            <option value="EGP">EGP</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
+
+
+                <div class="col-12 ">
                     <div class="promotion-news-event">
                         <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Promotions News & Event</h6>
                         <span>Check Latest Promotions & News</span>
                         <div class="news-events-cards limit-height wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay="0s">
                             {%for new in news%}
-                            <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card mb-12">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src={{new.master.image.url}} class="card-img" alt="...">
@@ -227,7 +130,7 @@ function changeAmount(){
                                             <a href="{%url 'news_details' pk=new.pk %}" class="pull-right"><i class="fas fa-chevron-right"></i></a>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             {%endfor%}
@@ -243,7 +146,7 @@ function changeAmount(){
             <div class="paymax-content col-6">
                 <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{pay.title}}</h6>
                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{pay.description|safe}}</p>
-                <a href="{%url 'product_detail' pk=1 %}" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                <a href="https://www.online.paymaxuae.com" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                     data-wow-delay=".5s">Read More</a>
             </div>
         </div>
@@ -262,17 +165,22 @@ function changeAmount(){
                         <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                             <!-- Card content -->
                             <div class="card-body">
-                                <!-- card date -->
+                                <!-- card date
                                 <div class="product-date">
                                     <span>{{product.master.date|date:"j"}}</span>
                                     <hr>
                                     <span>{{product.master.date|date:"M"}}</span>
-                                </div>
+                                </div>-->
                                 <!-- Title -->
                                 <h4 class="card-title"><a>{{product.title}}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{{product.description|safe}}</p>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                                including versions of Lorem Ipsum</p>
                                 <!-- Button -->
                                 <a href="{%url 'product_detail' pk=product.pk %}" class="btn btn-primary">Read More</a>
                             </div>
@@ -309,12 +217,12 @@ function changeAmount(){
                     <div class="useful-links">
                         <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".75s">Useful Links</h6>
                         <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                            <li>Privacy & Policy</li>
-                            <li>Terms of use</li>
-                            <li>Terms & Conditions</li>
-                            <li>Charge List</li>
-                            <li>FAQ</li>
-                            <li>Contact us</li>
+                            <li><a href="{%url 'privacy'%}">Privacy & Policy</a></li>
+                            <li><a href="{%url 'use'%}">Terms of use</a></li>
+                            <li><a href = "{%url 'condition'%}">Terms & Conditions</a></li>
+                            <li><a href="">Charge List</a></li>
+                            <li><a href="{%url 'faq'%}">FAQ</a></li>
+                            <li><a href="{%url 'contact'%}">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -324,42 +232,43 @@ function changeAmount(){
                             <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.25s">Download Our App</h6>
                             <div class="download-stores wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <div class="stores">
-                                    <a href="#"><img src="{%static 'images/App-img/appstore.png'%}" alt=""></a>
+                                    <a href="https://apps.apple.com/ae/app/paymax/id951789652"><img src="{%static 'images/App-img/appstore.png'%}" alt=""></a>
                                 </div>
                                 <div class="stores">
-                                    <a href="#"><img src="{% static 'images/App-img/android.png'%}" alt=""></a>
+                                    <a href="https://play.google.com/store/apps/details?id=ae.s4m.paymax"><img src="{% static 'images/App-img/android.png'%}" alt=""></a>
                                 </div>
                             </div>
                         </div>
                         <div class="social-media">
-                            <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.75s"><i
+                            <a href="https://www.facebook.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.75s"><i
                                     class="fab fa-facebook-square"></i></a>
-                            <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s"><i
+                            <a href="https://twitter.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s"><i
                                     class="fab fa-twitter-square"></i></a>
-                            <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.25s"><i
-                                    class="fab fa-youtube-square"></i></a>
-                            <a href="#" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
+                            <a href="http://linkedin.com/company/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.25s"><i
+                                    class="fab fa-linkedin-square"></i></a>
+                            <a href="https://www.instagram.com/LariExchangeUAE" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
                                     class="fab fa-instagram"></i></a>
                         </div>
                         <div class="copyright">
-                            <p>© Copyrights 2019 Lari Exchange.</p>
+                            <p>© Copyrights 2020 Lari Exchange.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-   
+
     <div class="overlay" id="overlay">
         <div class="menu-logo">
             <img src="{% static 'images/logo-1-wht.png'%}" alt="">
         </div>
         <nav class="overlay-menu">
             <ul>
-                <li class="active"><a href="{%url 'home'%}">Home</a></li>
+                <li class=><a href="{%url 'home'%}">Home</a></li>
                 <li class="hoverzone">
-                    <a href="{%url 'about'%}">About</a>
+                    <a href="{%url 'aboutmain'%}">About</a>
                     <ul class="sub-menu about-submenu">
+                        <li><a href="{%url 'about'%}">About Lari</a></li>
                         <li><a href="{%url 'ceo'%}">Message from CEO</a></li>
                         <li><a href="{%url 'mission'%}">Mission & Vision</a></li>
                         <li class="active"><a href="{%url 'technology'%}">Technology</a></li>
@@ -368,10 +277,24 @@ function changeAmount(){
                 </li>
                 <li class="hoverzone">
                     <a href="{%url 'products'%}">Product & Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">FOREX</a></li>
+                        <li><a href="#">Remittances</a></li>
+                        <li class="active"><a href="#">Bill Payments</a></li>
+                        <li><a href="#">Inter Emirates transfer</a></li>
+                        <li><a href="#">Credit Card Cash Advance</a></li>
+                        <li><a href="#">Money Products</a></li>
+                        <li><a href="#">Payroll</a></li>
+                        <li><a href="#">Prepaid cards</a></li>
+                        <li><a href="#">Delivery Channels</a></li>
+                    </ul>
                 </li>
-                <li><a href="{%url 'news'%}">PROMOTIONS & NEWS</a></li>
-                <li><a href="{%url 'contact'%}">Contact</a></li>
+                <li><a href="{%url 'news'%}">Promotions & News</a></li>
+                <li><a href="{%url 'contact'%}">Contact us</a></li>
                 <li><a href="{%url 'faq'%}">FAQ</a></li>
+                <li class=><a href="{%url 'branches'%}">Branches</a></li>
+                <li class=><a href="{%url 'atm'%}">ATM</a></li>
+                <li class=><a href="{%url 'jobs'%}">Careers</a></li>
             </ul>
         </nav>
     </div>
