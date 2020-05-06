@@ -16,6 +16,7 @@ class products_detail(models.Model):
                    ('ar','ar')
     )
     tag = models.CharField(max_length=5,choices=language,default='eng')
+    price = models.FloatField(null=True, blank=True)
     master = models.ForeignKey(products_master,on_delete=models.SET_NULL,null=True)
 
     def __str__(self):
