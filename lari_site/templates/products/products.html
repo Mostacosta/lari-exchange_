@@ -39,11 +39,11 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- card date -->
-                                <div class="product-date">
+                                {% comment %} <div class="product-date">
                                     <span>{{product.master.date|date:"j"}}</span>
                                     <hr>
                                     <span>{{product.master.date|date:"M"}}</span>
-                                </div>
+                                </div> {% endcomment %}
                                 <!-- Title -->
                                 <h4 class="card-title"><a>{{product.title}}</a>
                                 </h4>

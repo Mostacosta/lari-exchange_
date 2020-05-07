@@ -370,6 +370,8 @@ body.overlay-opened {
   position: fixed;
   z-index: 100;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
 }
 #lari-header.scrolled-nav {
   padding: 5px 0;
@@ -717,6 +719,7 @@ body.overlay-opened {
   z-index: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #lari-paymax:after {
   content: "";
@@ -970,9 +973,7 @@ body.overlay-opened {
 }
 .overlay nav {
   position: relative;
-  height: 50%;
-  top: 30%;
-  transform: translateY(-50%);
+  padding-top: 1rem;
   font-size: 1.5rem;
   font-weight: 800;
   text-align: left;
@@ -988,12 +989,14 @@ body.overlay-opened {
 }
 .overlay ul li {
   display: block;
-  height: 25%;
-  height: calc(100% / 6);
-  min-height: 50px;
   position: relative;
   opacity: 0;
-  padding: 20px;
+  padding: 8px;
+}
+@media only screen and (max-width: 992px) {
+  .overlay ul li {
+    padding: 4px;
+  }
 }
 .overlay ul li ul.sub-menu {
   top: 33px;
@@ -1006,8 +1009,8 @@ body.overlay-opened {
 .overlay ul li ul.sub-menu.submenu-opened {
   display: block;
   z-index: 999;
-  top: -100%;
-  left: 100%;
+  top: -1.6rem;
+  left: calc(100% + 8px);
   width: 90%;
   position: absolute;
   height: auto;
@@ -1038,7 +1041,7 @@ body.overlay-opened {
   content: "";
   position: absolute;
   left: -20px;
-  top: calc(30% - 45px);
+  top: 2.5rem;
   width: 0;
   height: 0;
   border-style: solid;
@@ -1180,17 +1183,49 @@ body.overlay-opened {
 .contact-form-sec {
   margin: 50px 0;
 }
+.contact-form-sec .branches-atm-contact p {
+  color: #7b7b7b;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.contact-form-sec .branches-atm-contact a {
+  color: #f58c29;
+  font-weight: bold;
+}
+.contact-form-sec .message-wrapper {
+  min-height: 30px;
+  margin-top: 15px;
+}
+.contact-form-sec .message i {
+  color: #f58c29;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.contact-form-sec .message p {
+  display: inline;
+  vertical-align: text-top;
+  font-size: 0.9rem;
+}
+.contact-form-sec .message span {
+  color: #f58c29;
+}
 .contact-form-sec .contact-form-box {
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 .contact-form-sec .contact-form-box .col:first-child {
-  background-image: url(../images/slider/4.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 20px 0px 0 20px;
   position: relative;
+  padding: 0;
+}
+.contact-form-sec .contact-form-box .col iframe {
+  filter: brightness(100%) contrast(85%) saturate(0%) blur(0) hue-rotate(0deg);
+  height: 100%;
+  position: relative;
+  border-radius: 20px 0 0 20px;
 }
 .contact-form-sec .contact-form-box .col:first-child::before {
   content: "";
@@ -1203,7 +1238,7 @@ body.overlay-opened {
   border-radius: 20px 0px 0 20px;
 }
 .contact-form-sec .contact-form-box .contact-form {
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 .contact-form-sec .contact-form-box .contact-form h6 {
   font-weight: 600;
