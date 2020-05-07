@@ -388,6 +388,11 @@ body.overlay-opened {
 #lari-header .navbar .navbar-brand img {
   width: 120px;
 }
+#lari-header .navbar .login-button a {
+  background-color: #f58c29 !important;
+  border-radius: 7px;
+  box-shadow: none;
+}
 #lari-header .navbar .navbar-collapse .language-switcher {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
@@ -1179,6 +1184,15 @@ body.overlay-opened {
   font-size: 0.8rem;
   font-weight: 400;
 }
+/* Careers page */
+.contact-form-sec.careers .contact-form-box .col:first-child {
+  background-image: url(../images/slider/4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px 0px 0 20px;
+  position: relative;
+}
+/*End Careers page*/
 
 .contact-form-sec {
   margin: 50px 0;
@@ -1187,11 +1201,23 @@ body.overlay-opened {
   color: #7b7b7b;
   font-weight: 300;
   padding-top: 10px;
-  padding-bottom: 30px;
+
 }
 .contact-form-sec .branches-atm-contact a {
   color: #f58c29;
   font-weight: bold;
+}
+.contact-form-sec .whatsapp-num {
+  padding-bottom: 30px;
+}
+.contact-form-sec .whatsapp-num i {
+  color: #f58c29;
+  font-size: 1.5rem;
+  vertical-align: top;
+  padding-right: 4px;
+}
+.contact-form-sec .whatsapp-num a {
+  color: #f58c29;
 }
 .contact-form-sec .message-wrapper {
   min-height: 30px;
