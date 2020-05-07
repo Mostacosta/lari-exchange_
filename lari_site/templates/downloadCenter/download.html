@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+    <!-- START PAGE HEAD SECTION -->
+    <section class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="page-title">
+                        <h3>Download Center</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Download Center</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-header text-center">
+                <h6>
+                   {{contact.title}}
+                </h6>
+                <p>
+                    {{contact.description|safe}}
+                </p>
+            </div>
+            <div class="contactinfo-box">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="contactinfo-col">
+                            <div class="icon-circled">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contactinfo-text">
+                                <h6>Phone</h6>
+                                <p>{{contact.phone}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xs-12">
+                        <div class="contactinfo-col">
+                            <div class="icon-circled">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="contactinfo-text">
+                                <h6>Address</h6>
+                                <p>{{contact.address}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xs-12">
+                        <div class="contactinfo-col">
+                            <div class="icon-circled">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contactinfo-text">
+                                <h6>EMAIL</h6>
+                                <p>{{contact.email}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+    
