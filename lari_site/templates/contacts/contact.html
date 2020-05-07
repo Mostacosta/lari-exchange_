@@ -77,30 +77,50 @@
         <div class="container">
             <div class="contact-form-box">
                 <div class="row">
-                    <div class="col col-xs-12"></div>
+                    <div class="col col-xs-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.888151040218!2d54.35605421537163!3d24.48933196606167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6665244fa049%3A0x550d293bceb8cd70!2sLari%20Exchange%20-%20Head%20Office!5e0!3m2!1sen!2seg!4v1588807118964!5m2!1sen!2seg"\
+                        width="600"
+                        height="450"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                        >
+                        </iframe>
+                    </div>
                     <div class="col col-xs-12">
                         <div class="contact-form">
+                            <div class="branches-atm-contact">
+                                <p>Learn more about our <a href="#">branches</a> and <a href="#">ATMS</a> or you can contact us from here </p>
+                            </div>
                             <h6>Contact Information</h6>
                             <form method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Your Name" name="name">
+                                        placeholder="Your Name" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Phone" name="phone">
+                                        placeholder="Phone" name="phone" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Email Address" name="email">
+                                        aria-describedby="emailHelp" placeholder="Email Address" name="email" required>
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        placeholder="Message" name="message"></textarea>
+                                        placeholder="Message" name="message" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Send</button>
                             </form>
+                            <div class="message-wrapper">
+                                <div class="message">
+                                    <i class="far fa-check-circle"></i>
+                                    <p>Thank you for your message, <span>Lari</span> staff will contact you!</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
