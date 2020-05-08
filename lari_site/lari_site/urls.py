@@ -56,7 +56,7 @@ urlpatterns = [
     path('atm',atm_view,name='atm'),
     path('careers',job_view,name='jobs'),
     path('aboutmain', TemplateView.as_view(template_name='about/about-main.html'),name='aboutmain'),
-    path('download', TemplateView.as_view(template_name='download/download.html'),name='download')
+    path('download', pdf_list,name='download')
 
 
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
