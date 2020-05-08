@@ -2,21 +2,20 @@
 {% block content %}
 {%load static%}
 
-
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>CDM List</h3>
+                        <h3>Branch List</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">CDM List</li>
+                            <li class="breadcrumb-item active" aria-current="page">Branch List</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,8 +27,8 @@
     <section id="lari-policy">
         <div class="container">
             <div class="header">
-                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">CDM List</h6>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our CDM List</p>
+                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Branch List</h6>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our Branch List</p>
             </div>
             <div class="col-12">
                 <div class="faq-info">
@@ -78,12 +77,10 @@
                                                                                                         <tr>
                                                                                                             <th>S No
                                                                                                             </th>
-                                                                                                            <th>CDM
-                                                                                                                Location
+                                                                                                            <th>Branch
                                                                                                                 Name
                                                                                                             </th>
-                                                                                                            <th>Location
-                                                                                                                Details
+                                                                                                            <th>Address
                                                                                                             </th>
                                                                                                             <th>Show Map
                                                                                                             </th>
@@ -99,20 +96,20 @@
                                                                                                             <td>{{forloop.counter}}</td>
                                                                                                             <td>{{detail.adress_name}}
                                                                                                             </td>
-                                                                                                            <td>
-                                                                                                            {{detail.adress_details}}
+                                                                                                            <td>{{detail.adress_details}}
                                                                                                             </td>
                                                                                                             <td>
                                                                                                                 <a class="popup-gmaps btn"
-                                                                                                                    href={{details.map}}>
+                                                                                                                    href={{detail.map}}>
                                                                                                                     Show
                                                                                                                     Map</a>
                                                                                                             </td>
                                                                                                         </tr>
-                                                                                                        {%endif%}
-                                                                                                        {%endfor%}
 
                                                                                                     </tbody>
+                                                                                                    {%endif%}
+                                                                                                    {%endfor%}
+
                                                                                                     <!--Table body-->
                                                                                                 </table>
                                                                                             </div>
@@ -130,15 +127,16 @@
                                                 </section>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 {%endfor%}
-                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                </section>
+                              </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
 
+    </section>
+    </section
    {% endblock content%}

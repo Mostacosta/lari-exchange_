@@ -76,21 +76,21 @@
         </div>
     </section>
     <!-- START PAYMAX SECTION -->
-    <section id="lari-paymax" style="background-image: url({{pay.master.image.url}})">
+    <section id="lari-paymax" style="background-image: url({{paymax.master.image.url}})">
         <div class="container row">
             <div class="col-6">
                 <div class="paymax-content">
-                    <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{pay.title}}</h6>
-                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{pay.description|safe}}</p>
-                    <a href="https://www.online.paymaxuae.com" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                    <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{paymax.title}}</h6>
+                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{paymax.description|safe|truncatewords:30}}</p>
+                    <a href="{% url 'news_details' pk=paymax.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".5s">Read More</a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="paymax-content">
-                    <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{pay.title}}</h6>
-                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{pay.description|safe}}</p>
-                    <a href="https://www.online.paymaxuae.com" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                    <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{travelex.title}}</h6>
+                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{travelex.description|safe|truncatewords:50}}</p>
+                    <a href="{% url 'news_details' pk=travelex.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".5s">Read More</a>
                 </div>
             </div>
@@ -114,12 +114,7 @@
                                 <h4 class="card-title"><a>{{product.title}}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including versions of Lorem Ipsum</p>
+                                <p class="card-text">{{product.description|safe|truncatewords:50}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'product_detail' pk=product.pk %}" class="btn btn-primary">Read More</a>
                             </div>

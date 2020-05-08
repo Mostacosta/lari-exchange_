@@ -12,6 +12,7 @@ def contact_view (request):
     lang = request.session.get('lang')
     my_contacts = get_object_or_404(contact_info, tag=lang)
     form  = contact_form()
+    message = ""
     if request.method == 'POST':
         form = contact_form(request.POST)
         if form.is_valid():
@@ -25,7 +26,10 @@ def contact_view (request):
             )
             email.send()
             form.save()
-    return render (request,'contacts/contact.html',{"contact":my_contacts,'form':form})
+            message = "Thank you for your message, Lari staff will contact you!"
+        else :
+            message = form.errors.as_text()
+    return render (request,'contacts/contact.html',{"contact":my_contacts,'form':form,'message':message})
     
 def job_view (request):
     jobs_ = jobs.objects.all()
