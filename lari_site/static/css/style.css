@@ -386,12 +386,14 @@ body.overlay-opened {
   box-shadow: none;
 }
 #lari-header .navbar .navbar-brand img {
-  width: 120px;
+  width: 150px;
 }
 #lari-header .navbar .login-button a {
   background-color: #f58c29 !important;
   border-radius: 7px;
   box-shadow: none;
+  padding: 5px 20px;
+  line-height: 30px;
 }
 #lari-header .navbar .navbar-collapse .language-switcher {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
@@ -746,6 +748,11 @@ body.overlay-opened {
   padding-right: 100px;
   padding-bottom: 15px;
 }
+@media only screen and (max-width: 992px) {
+  #lari-paymax .paymax-content {
+    padding: 20px;
+  } 
+}
 #lari-paymax .paymax-content h6 {
   font-weight: 800;
   font-size: 1.5rem;
@@ -984,6 +991,11 @@ body.overlay-opened {
   text-align: left;
   padding-left: 40px;
 }
+@media (max-height: 750px) {
+  .overlay nav {
+    font-size: 1.3rem;
+  }
+}
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -998,9 +1010,20 @@ body.overlay-opened {
   opacity: 0;
   padding: 8px;
 }
+@media (max-height: 750px) {
+  .overlay ul li {
+    padding: 4px;
+  }
+}
 @media only screen and (max-width: 992px) {
   .overlay ul li {
     padding: 4px;
+  }
+  .collapse:not(.show) {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
   }
 }
 .overlay ul li ul.sub-menu {
@@ -1209,6 +1232,7 @@ body.overlay-opened {
 }
 .contact-form-sec .whatsapp-num {
   padding-bottom: 30px;
+  font-size: 15px;
 }
 .contact-form-sec .whatsapp-num i {
   color: #f58c29;
