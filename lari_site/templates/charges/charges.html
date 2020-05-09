@@ -8,14 +8,14 @@
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>CDM</h3>
+                        <h3>Schedule of Charges</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">CDM</li>
+                            <li class="breadcrumb-item active" aria-current="page">Schedule of Charges</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,8 +27,8 @@
     <section id="lari-policy">
         <div class="container">
             <div class="header">
-                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">CDM</h6>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our CDM List</p>
+                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Schedule of Charges</h6>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our Schedule of Charges</p>
             </div>
             <div class="col-12">
                 <div class="faq-info">
@@ -42,7 +42,7 @@
                                         <h5 class="h5-md">
                                             <a data-toggle="collapse" href="#collapse{{forloop.counter}}" role="button"
                                                 aria-expanded="true" aria-controls="collapse{{forloop.counter}}">
-                                                {{master.city}}
+                                                {{master.headline}}
                                             </a>
                                         </h5>
                                     </div>
@@ -71,42 +71,31 @@
                                                                                             <div
                                                                                                 class="today-rates-table">
                                                                                                 <table id="tablePreview"
-                                                                                                    class="table">
+                                                                                                    class="table table-striped">
                                                                                                     <!--Table head-->
                                                                                                     <thead>
                                                                                                         <tr>
-                                                                                                            <th>S No
+                                                                                                            <th>Sl. No.
                                                                                                             </th>
-                                                                                                            <th>Branch
-                                                                                                                Name
+                                                                                                            <th>{{master.table_headline}}
                                                                                                             </th>
-                                                                                                            <th>Address
+                                                                                                            <th>Fee(in AED)
                                                                                                             </th>
-                                                                                                            <th>Show Map
-                                                                                                            </th>
+                                                                                                           
                                                                                                         </tr>
                                                                                                     </thead>
                                                                                                     <!--Table head-->
                                                                                                     <!--Table body-->
                                                                                                     <tbody>
                                                                                                     {%for detail in details%}
-                                                                                                    
-                                                                                                    {%if detail.city.city == master.city%}
+                                                                                                    {%if detail.Headline.headline == master.headline%}
                                                                                                         <tr>
                                                                                                             <td>{{forloop.counter}}</td>
-                                                                                                            <td>{{detail.adress_name}}
+                                                                                                            <td>{{detail.name}}
                                                                                                             </td>
-                                                                                                            <td>{{detail.adress_details}}
+                                                                                                            <td>{{detail.price}}
                                                                                                             </td>
-                                                                                                            <td>
-                                                                                                                <a class="popup-gmaps btn"
-                                                                                                                    href={{detail.map}}>
-                                                                                                                    Show
-                                                                                                                    Map</a>
-                                                                                                            </td>
-                                                                                                        </tr>
-
-                                                                                                   
+                                                                                                        </tr>                                                                                                    
                                                                                                     {%endif%}
                                                                                                     {%endfor%}
                                                                                                     </tbody>

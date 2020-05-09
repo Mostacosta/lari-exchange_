@@ -5,6 +5,7 @@ class download_master (models.Model):
     pdf_file = models.FileField(upload_to="files")
 
 class download_details (models.Model):
+    name = models.CharField(max_length=50,default="title")
     description = models.TextField()
     language = (('eng','eng'),
                    ('ar','ar')
@@ -13,4 +14,4 @@ class download_details (models.Model):
     master = models.ForeignKey(download_master,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.description[0:20]
+        return self.name

@@ -77,7 +77,7 @@
                                         aria-describedby="emailHelp" placeholder="Date">
                                 </div>
                                 <div class="form-group">
-                                    <input name="Nationalty" type="text" class="form-control" id="exampleInputEmail1"
+                                    <input name="Nationality" type="text" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Nationalty">
                                 </div>
                                 <div class="form-group">
@@ -89,7 +89,7 @@
                                         placeholder="Experience"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <input name="Mobile Number" type="text" class="form-control" id="exampleInputEmail1"
+                                    <input name="Mobile_Number" type="text" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Mobile Number">
                                 </div>
 								<div class="form-group">
@@ -98,6 +98,16 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary">Send</button>
                             </form>
+                            <div class="message-wrapper">
+                                <div class="message">
+                                {%if message == ""%}
+                                    <p>{{message}}</p>
+                                    {% else %}
+                                    <i class="far fa-check-circle"></i>
+                                    <p>{{message}}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

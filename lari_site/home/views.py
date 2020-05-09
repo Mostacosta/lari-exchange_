@@ -5,6 +5,7 @@ from news.models import news_detail
 from products.models import products_detail
 from .forms import calculator
 from django.http import JsonResponse
+from news.models import news_detail
 # Create your views here.
 
 def currency_table (request):
@@ -24,6 +25,8 @@ def home_view(request):
     news = news_detail.objects.filter(tag=lang)
     payment = paymentcard_detail.objects.filter(tag=lang)
     products = products_detail.objects.filter(tag=lang)
+    paymax = news_detail.objects.get(title="Paymax Card")
+    travelex = news_detail.objects.get(title="Travelflex cards")
     if request.method == "POST":
         print(request.POST)
         cal = calculator(request.POST)
@@ -40,7 +43,8 @@ def home_view(request):
             response_data['result']= result
             return JsonResponse(response_data)
 
-    return render(request,'home/index.html',{"sliders":sliders,"news":news,"pay":payment[0],"products":products[:3],"form":cal})
+    return render(request,'home/index.html',{"sliders":sliders,"news":news,"pay":payment[0],"products":products[:3],"form":cal
+    ,"paymax":paymax,"travelex":travelex})
 
 def change_lang (request):
     lang = request.session.get('lang')

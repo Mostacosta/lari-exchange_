@@ -12,6 +12,7 @@ def contact_view (request):
     lang = request.session.get('lang')
     my_contacts = get_object_or_404(contact_info, tag=lang)
     form  = contact_form()
+    message = ""
     if request.method == 'POST':
         form = contact_form(request.POST)
         if form.is_valid():
@@ -21,14 +22,18 @@ def contact_view (request):
             msg=request.POST["message"]
             mail_subject = "Email from "+username+" his phone number is "+phone+" and mail is "+email
             email = EmailMessage(
-                mail_subject, msg, to=["mostafaelhassan910@gmail.com"]
+                mail_subject, msg, to=["CSE@Lariexchange.com"]
             )
             email.send()
             form.save()
-    return render (request,'contacts/contact.html',{"contact":my_contacts,'form':form})
+            message = "Thank you for your message, Lari staff will contact you!"
+        else :
+            message = form.errors.as_text()
+    return render (request,'contacts/contact.html',{"contact":my_contacts,'form':form,'message':message})
     
 def job_view (request):
     jobs_ = jobs.objects.all()
+    message = ""
     if request.method =='POST':
         form = job_form(request.POST)
         if form.is_valid():
@@ -40,13 +45,16 @@ def job_view (request):
             nationality = request.POST["Nationality"]
             qualifications = request.POST["Qualifications"]
             experience = request.POST["Experience"]
-            phone=request.POST["Mobile Number"]
+            phone=request.POST["Mobile_Number"]
             email=request.POST["email"]
             mail_subject = "Email from "+username+" his phone number is "+phone+" and mail is "+email
             msg = job + "\n" + info + "\n" + gender + "\n" + date + "\n" + nationality + "\n" +qualifications + "\n" + experience
             email = EmailMessage(
-                    mail_subject, msg, to=["mostafaelhassan910@gmail.com"]
+                    mail_subject, msg, to=["CSE@Lariexchange.com"]
                 )
             email.send()
+            message = "Thank you for your message, Lari staff will contact you!"
+        else :
+            message = form.errors.as_text()
         
-    return render (request,'contacts/career.html',{"jobs":jobs_})
+    return render (request,'contacts/career.html',{"jobs":jobs_,"message":message})

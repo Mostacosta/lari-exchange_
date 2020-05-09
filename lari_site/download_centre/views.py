@@ -8,7 +8,7 @@ def pdf_list (request):
     if request.session.get('lang') == False:
         request.session['lang'] = 'eng'
     lang = request.session.get('lang')
-    ceo_ = get_list_or_404(download_details,tag=lang)
-    return HttpResponse ("hello")
+    files = get_list_or_404(download_details,tag=lang)
+    return render (request,"download/download.html",{'files':files})
     
 

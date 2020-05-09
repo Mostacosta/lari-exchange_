@@ -32,6 +32,7 @@ from django.views.generic import TemplateView
 from branches.views import branch_view
 from atm.views import atm_view
 from download_centre.views import pdf_list
+from charges.views import charges_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -56,7 +57,7 @@ urlpatterns = [
     path('atm',atm_view,name='atm'),
     path('careers',job_view,name='jobs'),
     path('aboutmain', TemplateView.as_view(template_name='about/about-main.html'),name='aboutmain'),
-    path('download', TemplateView.as_view(template_name='download/download.html'),name='download')
-
+    path('download', pdf_list,name='download'),
+    path('charges', charges_view,name='charges')
 
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

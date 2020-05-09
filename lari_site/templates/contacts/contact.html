@@ -92,7 +92,7 @@
                     <div class="col col-xs-12">
                         <div class="contact-form">
                             <div class="branches-atm-contact">
-                                <p>Learn more about our <a href="#">branches</a> and <a href="#">CDM</a>.</p>
+                                <p>Learn more about our <a href="{% url 'branches' %}">branches</a> and <a href="{% url 'atm' %}">CDM</a>.</p>
                             </div>
                             <div class="whatsapp-num">
                                 <i class="fab fa-whatsapp"></i>
@@ -121,8 +121,12 @@
                             </form>
                             <div class="message-wrapper">
                                 <div class="message">
+                                {%if message == ""%}
+                                    <p>{{message}}</p>
+                                    {% else %}
                                     <i class="far fa-check-circle"></i>
-                                    <p>Thank you for your message, <span>Lari</span> staff will contact you!</p>
+                                    <p>{{message}}</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

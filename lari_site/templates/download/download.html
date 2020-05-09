@@ -37,116 +37,18 @@
     <section class="download-page">
         <div class="container">
             <div class="row">
+                {% for file in files %}
                 <div class="col-sm-3">
                     <div class="download-figure">
                         <i class="far fa-file-alt"></i>
                         <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
+                            <h3>{{file.name}}</h3>
+                            <p>{{file.description|truncatewords:30}}</p>
                         </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
+                        <a href="{{file.master.pdf_file.url}}" role="button" class="btn">DOWNLOAD</a>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="download-figure">
-                        <i class="far fa-file-alt"></i>
-                        <div class="file-data">
-                            <h3>file title</h3>
-                            <p>file description lorem ipsum long text</p>
-                        </div>
-                        <a href="#" role="button" class="btn">DOWNLOAD</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
