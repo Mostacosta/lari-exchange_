@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'atm',
     'branches',
-    'download_centre'
+    'download_centre',
+    'charges'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'lariexchangeuae99@gmail.com'
+EMAIL_HOST_PASSWORD = 'interface_20'
+EMAIL_USE_TLS = True
