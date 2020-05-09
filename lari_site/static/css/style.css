@@ -860,7 +860,7 @@ body.overlay-opened {
   z-index: -1;
 }
 #lari-footer .about-footer .white-logo img {
-  width: 200px;
+  width: 250px;
 }
 #lari-footer .about-footer .about-footer-desc {
   color: #fff;
@@ -1120,7 +1120,7 @@ body.overlay-opened {
 }
 /**********/
 /* scss variables */
-/* STYLING CONTACT US PAGE */
+/* STYLING Reach US PAGE */
 .page-head {
   padding-top: 140px;
   padding-bottom: 20px;
