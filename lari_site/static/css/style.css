@@ -985,7 +985,7 @@ body.overlay-opened {
 .overlay nav {
   position: relative;
   padding-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
   text-align: left;
   padding-left: 40px;
@@ -1007,7 +1007,7 @@ body.overlay-opened {
   display: block;
   position: relative;
   opacity: 0;
-  padding: 8px;
+  padding: 4px;
 }
 @media (max-height: 750px) {
   .overlay ul li {
