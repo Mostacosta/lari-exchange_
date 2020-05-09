@@ -548,7 +548,6 @@ body.overlay-opened {
   overflow-y: scroll;
 }
 #lari-currency-news .rates-calc .today-rates-table table {
-  height: 260px;
   display: -moz-groupbox;
 }
 #lari-currency-news .rates-calc .today-rates-table table thead {
