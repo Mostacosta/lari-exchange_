@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Message from the CEO</h3>
+                        <h3>{% trans "Message from the CEO"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Message from the CEO</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Message from the CEO"%}</li>
                         </ol>
                     </nav>
                 </div>

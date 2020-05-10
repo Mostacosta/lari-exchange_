@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
 
 
     <!-- START PAGE HEAD SECTION -->
@@ -10,14 +10,14 @@
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>technology</h3>
+                        <h3>{% trans "technology"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">technology</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "technology"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="content">
                             <div class="list-tech">
-                                <p>Lari Exchange implements the following technologies:</p>
+                                <p>{% trans "Lari Exchange implements the following technologies:"%}</p>
                                 <ul class="row">
                                     {% for techno_ in technos %}
                                     <li class="col-sm-6 col-md-3"><span>{{techno_.title}}</span> </li>

@@ -5,10 +5,9 @@ from branches.models import branch_master
 # Create your views here.
 
 def atm_view(request):
-    if request.session.get('lang') == False:
+    if request.session.get('lang') == None:
         request.session['lang'] = 'eng'
-    request.session['lang'] = 'ar'
-    lang = 'eng'
+    lang = request.session.get('lang')
 
     masters = branch_master.objects.filter(tag=lang)
     details = atm_details.objects.filter(tag=lang)

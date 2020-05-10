@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Schedule of Charges</h3>
+                        <h3>{% trans "Schedule of Charges"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Schedule of Charges</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Schedule of Charges"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,8 +27,8 @@
     <section id="lari-policy">
         <div class="container">
             <div class="header">
-                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Schedule of Charges</h6>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our Schedule of Charges</p>
+                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{% trans "Schedule of Charges"%}</h6>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">{% trans "Check Our Schedule of Charges"%}</p>
             </div>
             <div class="col-12">
                 <div class="faq-info">
@@ -75,11 +75,11 @@
                                                                                                     <!--Table head-->
                                                                                                     <thead>
                                                                                                         <tr>
-                                                                                                            <th>Sl. No.
+                                                                                                            <th>{% trans "Sl. No."%}
                                                                                                             </th>
                                                                                                             <th>{{master.table_headline}}
                                                                                                             </th>
-                                                                                                            <th>Fee(in AED)
+                                                                                                            <th>{% trans "Fee(in AED)"%}
                                                                                                             </th>
                                                                                                            
                                                                                                         </tr>

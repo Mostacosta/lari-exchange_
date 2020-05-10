@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>About</h3>
+                        <h3>{% trans "About"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                            <li class="breadcrumb-item"><a href='{% url 'home'%}'>{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "About"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -41,14 +41,14 @@
                                 <h4 class="card-title"><a>About Lari</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">To meet out the challenges in satisfactory
+                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
                                     and reliable customer services, we are
                                     launching "Paymax Mobile" and "Paymax
                                     Online", a mobile/online application
                                     services to our customers which are
-                                    absolutely FREE.</p>
+                                    absolutely FREE."%}</p>
                                 <!-- Button -->
-                                <a href="{%url 'about'%}" class="btn btn-primary">More</a>
+                                <a href="{%url 'about'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->
@@ -59,17 +59,17 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>Message from CEO</a>
+                                <h4 class="card-title"><a>{% trans "Message from CEO"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">To meet out the challenges in satisfactory
+                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
                                     and reliable customer services, we are
                                     launching "Paymax Mobile" and "Paymax
                                     Online", a mobile/online application
                                     services to our customers which are
-                                    absolutely FREE.</p>
+                                    absolutely FREE."%}</p>
                                 <!-- Button -->
-                                <a href="{%url 'ceo'%}" class="btn btn-primary">More</a>
+                                <a href="{%url 'ceo'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->
@@ -80,17 +80,17 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>Mission & Vision</a>
+                                <h4 class="card-title"><a>{% trans "Mission & Vision"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">To meet out the challenges in satisfactory
+                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
                                     and reliable customer services, we are
                                     launching "Paymax Mobile" and "Paymax
                                     Online", a mobile/online application
                                     services to our customers which are
-                                    absolutely FREE.</p>
+                                    absolutely FREE."%}</p>
                                 <!-- Button -->
-                                <a href="{%url 'mission'%}" class="btn btn-primary">More</a>
+                                <a href="{%url 'mission'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->
@@ -101,17 +101,17 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>Technology</a>
+                                <h4 class="card-title"><a>{% trans "Technology"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">To meet out the challenges in satisfactory
+                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
                                     and reliable customer services, we are
                                     launching "Paymax Mobile" and "Paymax
                                     Online", a mobile/online application
                                     services to our customers which are
-                                    absolutely FREE.</p>
+                                    absolutely FREE."%}</p>
                                 <!-- Button -->
-                                <a href="{%url 'technology'%}" class="btn btn-primary">More</a>
+                                <a href="{%url 'technology'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->
@@ -122,17 +122,17 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>Partners</a>
+                                <h4 class="card-title"><a>{% trans "Partners"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">To meet out the challenges in satisfactory
+                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
                                     and reliable customer services, we are
                                     launching "Paymax Mobile" and "Paymax
                                     Online", a mobile/online application
                                     services to our customers which are
-                                    absolutely FREE.</p>
+                                    absolutely FREE."%}</p>
                                 <!-- Button -->
-                                <a href="{%url 'partner'%}" class="btn btn-primary">More</a>
+                                <a href="{%url 'partner'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->

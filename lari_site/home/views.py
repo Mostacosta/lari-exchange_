@@ -6,6 +6,7 @@ from products.models import products_detail
 from .forms import calculator
 from django.http import JsonResponse
 from news.models import news_detail
+from django.utils import translation
 # Create your views here.
 
 def currency_table (request):
@@ -16,11 +17,9 @@ def currency_table (request):
     return HttpResponse (data)
 
 def home_view(request):
-    if request.session.get('lang') == False:
+    if request.session.get('lang') == None:
         request.session['lang'] = 'eng'
-    
-    request.session['lang'] = 'ar'
-    lang = 'eng'
+    lang= request.session.get('lang')
     cal = calculator()
     sliders = slider_detail.objects.filter(tag=lang)
     news = news_detail.objects.filter(tag=lang)
@@ -49,9 +48,10 @@ def home_view(request):
 
 def change_lang (request):
     lang = request.session.get('lang')
-    print(lang)
     if lang =='eng':
         request.session['lang'] = 'ar'
+        translation.activate("ar")
     else :
         request.session['lang'] = 'eng'
+        translation.activate("en-us")
     return redirect(request.META.get('HTTP_REFERER'))

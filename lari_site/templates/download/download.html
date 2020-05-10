@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Download Center</h3>
+                        <h3>{% trans "Download Center"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Download Center</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Download Center"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -26,7 +26,7 @@
         <div class="container">
             <div class="contact-header text-center">
                 <h6>
-                   Our Download Center
+                   {% trans "Our Download Center"%}
                 </h6>
                 {% comment %} <p>
                     Lorem ipsum download center lorem ipsum
@@ -45,7 +45,7 @@
                             <h3>{{file.name}}</h3>
                             <p>{{file.description|truncatewords:30}}</p>
                         </div>
-                        <a href="{{file.master.pdf_file.url}}" role="button" class="btn">DOWNLOAD</a>
+                        <a href="{{file.master.pdf_file.url}}" role="button" class="btn">{% trans "DOWNLOAD"%}</a>
                     </div>
                 </div>
                 {% endfor %}

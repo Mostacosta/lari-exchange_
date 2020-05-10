@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-10 00:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\templates\about\about-main.html:11 .\templates\about\about-main.html:18
+#, fuzzy
+#| msgid "About Lari"
+msgid "About"
+msgstr "عن لاري"
+
+#: .\templates\about\about-main.html:17 .\templates\about\about.html:17
+#: .\templates\atm\atm.html:17 .\templates\branches\branches.html:18
+#: .\templates\ceo\ceo.html:17 .\templates\charges\charges.html:17
+#: .\templates\contacts\career.html:17 .\templates\contacts\contact.html:17
+#: .\templates\download\download.html:17 .\templates\faq\faq.html:18
+#: .\templates\missions\mission.html:17 .\templates\news\promotions.html:17
+#: .\templates\partners\partners.html:17 .\templates\products\products.html:17
+#: .\templates\products\single-product.html:17
+#: .\templates\technology\technology.html:19
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\templates\about\about-main.html:51 .\templates\about\about-main.html:72
+#: .\templates\about\about-main.html:93 .\templates\about\about-main.html:114
+#: .\templates\about\about-main.html:135
+msgid "More"
+msgstr "مزيد"
+
+#: .\templates\about\about-main.html:62
+msgid "Message from CEO"
+msgstr "رسالة من المدير"
+
+#: .\templates\about\about-main.html:83 .\templates\missions\mission.html:11
+#: .\templates\missions\mission.html:18
+msgid "Mission & Vision"
+msgstr "الرؤية"
+
+#: .\templates\about\about-main.html:104
+msgid "Technology"
+msgstr "التكنولوجيا"
+
+#: .\templates\about\about-main.html:125 .\templates\partners\partners.html:11
+#: .\templates\partners\partners.html:18
+msgid "Partners"
+msgstr "الشركاء"
+
+#: .\templates\about\about.html:11 .\templates\about\about.html:18
+msgid "About Lari"
+msgstr "عن لاري"
+
+#: .\templates\atm\atm.html:11 .\templates\atm\atm.html:18
+#: .\templates\atm\atm.html:30
+msgid "CDM"
+msgstr "اماكن المكينات"
+
+#: .\templates\atm\atm.html:31
+msgid "Check Our CDM List"
+msgstr "تفقد اماكن المكينات"
+
+#: .\templates\atm\atm.html:78 .\templates\branches\branches.html:79
+msgid "S No"
+msgstr "الرقم"
+
+#: .\templates\atm\atm.html:83 .\templates\branches\branches.html:84
+msgid "Address"
+msgstr "العنوان"
+
+#: .\templates\atm\atm.html:85 .\templates\branches\branches.html:86
+msgid "Show Map"
+msgstr "عرض الخريطة"
+
+#: .\templates\branches\branches.html:12 .\templates\branches\branches.html:19
+#: .\templates\branches\branches.html:31
+msgid "Branch List"
+msgstr "الفروع"
+
+#: .\templates\branches\branches.html:32
+msgid "Check Our Branch List"
+msgstr "تفقد الفروع"
+
+#: .\templates\ceo\ceo.html:11 .\templates\ceo\ceo.html:18
+msgid "Message from the CEO"
+msgstr "رسالة من المدير"
+
+#: .\templates\charges\charges.html:11 .\templates\charges\charges.html:18
+#: .\templates\charges\charges.html:30
+msgid "Schedule of Charges"
+msgstr "تست"
+
+#: .\templates\charges\charges.html:31
+msgid "Check Our Schedule of Charges"
+msgstr "تست"
+
+#: .\templates\charges\charges.html:78
+msgid "Sl. No."
+msgstr "الرقم"
+
+#: .\templates\charges\charges.html:82
+msgid "Fee(in AED)"
+msgstr "السعر بالدرهم"
+
+#: .\templates\contacts\career.html:11
+msgid "Career"
+msgstr "الوظيفة"
+
+#: .\templates\contacts\career.html:18
+msgid "Careers"
+msgstr "الوظائف"
+
+#: .\templates\contacts\career.html:30
+msgid "Brief about our work"
+msgstr "ملخص عن عملنا"
+
+#: .\templates\contacts\career.html:47
+msgid "Apply with basic details"
+msgstr "تست"
+
+#: .\templates\contacts\contact.html:11 .\templates\contacts\contact.html:18
+msgid "Reach Us"
+msgstr "اتل بنا"
+
+#: .\templates\download\download.html:11 .\templates\download\download.html:18
+msgid "Download Center"
+msgstr "مركز التحميل"
+
+#: .\templates\download\download.html:29
+msgid "Our Download Center"
+msgstr "مركز التحميل"
+
+#: .\templates\download\download.html:49
+msgid "DOWNLOAD"
+msgstr "حمل"
+
+#: .\templates\faq\faq.html:12 .\templates\faq\faq.html:19
+#: .\templates\faq\faq.html:32
+msgid "FAQ"
+msgstr "سؤال و اجابة"
+
+#: .\templates\faq\faq.html:35
+msgid "Check frequently asked questions"
+msgstr "تست"
+
+#: .\templates\faq\faq.html:41
+msgid "PayMax FAQ"
+msgstr "تست"
+
+#: .\templates\faq\faq.html:82
+msgid "GCard FAQ"
+msgstr "تست"
+
+#: .\templates\home\index.html:48
+msgid "Promotions News & Event"
+msgstr "الاخبار"
+
+#: .\templates\home\index.html:49 .\templates\news\promotions.html:34
+msgid "Check Latest Promotions & News"
+msgstr "تفقد اخر الاخبار"
+
+#: .\templates\home\index.html:86 .\templates\home\index.html:94
+#: .\templates\home\index.html:119
+#, fuzzy
+#| msgid "More"
+msgid "Read More"
+msgstr "مزيد"
+
+#: .\templates\home\index.html:103
+msgid "Products"
+msgstr "المنتجات"
+
+#: .\templates\home\index.html:104 .\templates\products\products.html:31
+msgid "Check our latest products"
+msgstr "تفقد اخر المنتجات"
+
+#: .\templates\news\promotions.html:11 .\templates\news\promotions.html:18
+#: .\templates\news\promotions.html:31
+msgid "Promotions & News"
+msgstr "الاخبار"
+
+#: .\templates\products\products.html:11 .\templates\products\products.html:18
+#: .\templates\products\products.html:30
+msgid "Products & Services"
+msgstr "الخدمات و المنتجات"
+
+#: .\templates\products\single-product.html:11
+#: .\templates\products\single-product.html:18
+msgid "Forex"
+msgstr "فوركس"
+
+#: .\templates\products\single-product.html:36
+msgid "All Services"
+msgstr "كل الخدمات"
+
+#: .\templates\technology\technology.html:13
+#: .\templates\technology\technology.html:20
+msgid "technology"
+msgstr "تكنولوجيا"
+
+#: .\templates\technology\technology.html:43
+msgid "Lari Exchange implements the following technologies:"
+msgstr "تست"

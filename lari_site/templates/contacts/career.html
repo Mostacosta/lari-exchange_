@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Career</h3>
+                        <h3>{% trans "Career"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Careers</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Careers"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,7 +27,7 @@
         <div class="container">
             <div class="contact-header text-center">
                 <h6>
-                    Brief about our work
+                    {% trans "Brief about our work"%}
               </h6>
                 {% comment %} <p>
                    Dynamic text -brief about our work- to be added from backend
@@ -43,7 +43,7 @@
                     <div class="col col-xs-12"></div>
                     <div class="col col-xs-12">
                         <div class="contact-form">
-                            <h6>Apply with basic details</h6>
+                            <h6>{% trans "Apply with basic details"%}</h6>
                             <form method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">

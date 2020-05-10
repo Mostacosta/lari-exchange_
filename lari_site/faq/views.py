@@ -3,7 +3,7 @@ from .models import GCard_questions,paymax_questions
 # Create your views here.
 
 def questions_view (request):
-    if request.session.get('lang') == False:
+    if request.session.get('lang') == None:
         request.session['lang'] = 'eng'
     lang = request.session.get('lang')
     gc_ques = GCard_questions.objects.filter(tag=lang)

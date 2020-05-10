@@ -5,10 +5,9 @@ from .models import download_details
 # Create your views here.
 
 def pdf_list (request):
-    if request.session.get('lang') == False:
+    if request.session.get('lang') == None:
         request.session['lang'] = 'eng'
-    request.session['lang'] = 'ar'
-    lang = 'eng'
+    lang = request.session.get('lang')
     files = get_list_or_404(download_details,tag=lang)
     return render (request,"download/download.html",{'files':files})
     

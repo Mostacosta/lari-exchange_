@@ -7,10 +7,9 @@ from django.core.mail import EmailMessage
 
 # Create your views here.
 def contact_view (request):
-    if request.session.get('lang') == False:
+    if request.session.get('lang') == None:
         request.session['lang'] = 'eng'
-    request.session['lang'] = 'ar'
-    lang = 'eng'
+    lang = request.session.get('lang')
     my_contacts = get_object_or_404(contact_info, tag=lang)
     form  = contact_form()
     message = ""

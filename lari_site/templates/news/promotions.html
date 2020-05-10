@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Promotions & News</h3>
+                        <h3>{% trans "Promotions & News"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Promotions & News</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Promotions & News"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,10 +28,10 @@
             <div class="promotions-box">
                 <div class="header">
                     <h6>
-                        Promotions & News
+                        {% trans "Promotions & News"%}
                     </h6>
                     <p>
-                        Check Latest Promotions & News
+                        {% trans "Check Latest Promotions & News"%}
                     </p>
                 </div>
                 <div class="content">

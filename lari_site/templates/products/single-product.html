@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>Forex</h3>
+                        <h3>{% trans "Forex"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Forex</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "Forex"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -33,7 +33,7 @@
 
                         <!-- service-menu - start -->
                         <div class="service-menu mb-30">
-                            <h2 class="sidebar-title">All Services</h2>
+                            <h2 class="sidebar-title">{% trans "All Services"%}</h2>
                             <ul>
                                 {%for prod in products%}
                                 {%if prod.pk == product.pk %}

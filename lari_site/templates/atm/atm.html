@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>CDM</h3>
+                        <h3>{% trans "CDM"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">CDM</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "CDM"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,8 +27,8 @@
     <section id="lari-policy">
         <div class="container">
             <div class="header">
-                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">CDM</h6>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check Our CDM List</p>
+                <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{% trans "CDM"%}</h6>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">{% trans "Check Our CDM List"%}</p>
             </div>
             <div class="col-12">
                 <div class="faq-info">
@@ -75,14 +75,14 @@
                                                                                                     <!--Table head-->
                                                                                                     <thead>
                                                                                                         <tr>
-                                                                                                            <th>S No
+                                                                                                            <th>{% trans "S No"%}
                                                                                                             </th>
-                                                                                                            <th>Branch
-                                                                                                                Name
+                                                                                                            <th>{% trans "Branch
+                                                                                                                Name"%}
                                                                                                             </th>
-                                                                                                            <th>Address
+                                                                                                            <th>{% trans "Address"%}
                                                                                                             </th>
-                                                                                                            <th>Show Map
+                                                                                                            <th>{% trans "Show Map"%}
                                                                                                             </th>
                                                                                                         </tr>
                                                                                                     </thead>

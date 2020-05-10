@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {%load static%}
-
+{% load i18n %}
 
     <!-- START PAGE HEAD SECTION -->
     <section class="page-head">
@@ -9,14 +9,14 @@
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h3>FAQ</h3>
+                        <h3>{% trans "FAQ"%}</h3>
                     </div>
                 </div>
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                            <li class="breadcrumb-item"><a href="{% url 'home'%}">{% trans "Home"%}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans "FAQ"%}</li>
                         </ol>
                     </nav>
                 </div>
@@ -29,16 +29,16 @@
             <div class="faq-box">
                 <div class="header">
                     <h6>
-                        FAQ
+                        {% trans "FAQ"%}
                     </h6>
                     <p>
-                        Check frequently asked questions
+                        {% trans "Check frequently asked questions"%}
                     </p>
                 </div>
                 <div class="content">
                     <div id="accordion" role="tablist" class="inner_faq_section">
                         <div class="faq-title">
-                            <h3>PayMax FAQ :</h3>
+                            <h3>{% trans "PayMax FAQ"%} :</h3>
                         </div>
                         <div class="row">
 
@@ -79,7 +79,7 @@
                             </div></div></div></div>
                     <div id="accordiontwo" role="tablist" class="inner_faq_section">
                         <div class="faq-title">
-                            <h3>GCard FAQ :</h3>
+                            <h3>{% trans "GCard FAQ"%} :</h3>
                         </div>
                         <div class="row">
                             <div class="col-12">

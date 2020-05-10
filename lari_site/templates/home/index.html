@@ -2,7 +2,7 @@
 {% block content %}
 
 {%load static%}
-
+{% load i18n %}
     <!-- Start LARI CAROUSEL -->
     <section id="lari-carousel">
         <div id="main-slider" class="carousel slide" data-ride="carousel">
@@ -45,8 +45,8 @@
 
                 <div class="col-12 ">
                     <div class="promotion-news-event">
-                        <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Promotions News & Event</h6>
-                        <span>Check Latest Promotions & News</span>
+                        <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{% trans "Promotions News & Event"%}</h6>
+                        <span>{% trans "Check Latest Promotions & News"%}</span>
                         <div class="news-events-cards limit-height wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay="0s">
                             {%for new in news%}
@@ -83,7 +83,7 @@
                     <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{paymax.title}}</h6>
                     <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{paymax.description|safe|truncatewords:30}}</p>
                     <a href="{% url 'news_details' pk=paymax.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
-                        data-wow-delay=".5s">Read More</a>
+                        data-wow-delay=".5s">{% trans "Read More"%}</a>
                 </div>
             </div>
             <div class="col-6">
@@ -91,7 +91,7 @@
                     <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{travelex.title}}</h6>
                     <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{travelex.description|safe|truncatewords:50}}</p>
                     <a href="{% url 'news_details' pk=travelex.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
-                        data-wow-delay=".5s">Read More</a>
+                        data-wow-delay=".5s">{% trans "Read More"%}</a>
                 </div>
             </div>
         </div>
@@ -100,8 +100,8 @@
     <!-- START PRODUCT SECTION -->
     <section id="lari-products">
         <div class="container">
-            <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Products</h6>
-            <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">Check our latest products</span>
+            <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{% trans "Products"%}</h6>
+            <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">{% trans "Check our latest products"%}</span>
             <div class="product-cards">
                 <div class="row">
                         {%for product in products%}
@@ -116,7 +116,7 @@
                                 <!-- Text -->
                                 <p class="card-text">{{product.description|safe|truncatewords:50}}</p>
                                 <!-- Button -->
-                                <a href="{%url 'product_detail' pk=product.pk %}" class="btn btn-primary">Read More</a>
+                                <a href="{%url 'product_detail' pk=product.pk %}" class="btn btn-primary">{% trans "Read More"%}</a>
                             </div>
                         </div>
                         <!-- Card -->
