@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 def ceo_view (request):
     if request.session.get('lang') == False:
         request.session['lang'] = 'eng'
-    lang = request.session.get('lang')
+    request.session['lang'] = 'ar'
+    lang = 'eng'
     ceo_ = get_object_or_404(ceo_detail,tag=lang)
     return render (request,'ceo/ceo.html',{"ceo":ceo_})

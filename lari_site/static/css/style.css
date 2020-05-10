@@ -469,7 +469,8 @@ body.overlay-opened {
   visibility: hidden;
   pointer-events: none;
 }
-#lari-header.overlay-opened .language-switcher {
+#lari-header.overlay-opened .language-switcher,
+#lari-header.overlay-opened .login-button {
   display: none;
 }
 #lari-header.overlay-opened .button_container {
@@ -1036,7 +1037,7 @@ body.overlay-opened {
 .overlay ul li ul.sub-menu.submenu-opened {
   display: block;
   z-index: 999;
-  top: -1.6rem;
+  top: -2rem;
   left: calc(100% + 8px);
   width: 90%;
   position: absolute;
@@ -1593,18 +1594,21 @@ body.overlay-opened {
 }
 
 /* Styling product page */
-#lari-products .header {
+#lari-products .header,
+#lari-policy .header {
   margin-top: 50px;
   margin-bottom: 80px;
   border-left: 3px solid #f58c29;
   padding-left: 15px;
 }
-#lari-products .header h6 {
+#lari-products .header h6,
+#lari-policy .header h6 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #404f5e;
 }
-#lari-products .header p {
+#lari-products .header p,
+#lari-policy .header p {
   font-weight: 300;
   color: #7b7b7b;
 }
