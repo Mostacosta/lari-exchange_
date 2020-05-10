@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 def about_view (request):
     if request.session.get('lang') == False:
         request.session['lang'] = 'eng'
-    lang = request.session.get('lang')
+    request.session['lang'] = 'ar'
+    lang = 'eng'
     about_ = get_object_or_404(about_details,tag=lang)
     return render(request,'about/about.html',{'about':about_})

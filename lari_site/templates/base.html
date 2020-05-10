@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="{%static 'css/responsive.css'%}">
     <link rel="shortcut icon" type="image/png" href="" />
 
+    {%if request.session.lang == "ar"%}
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+        integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="{%static 'css/mdb.min.css'%}">
+        <link rel="stylesheet" href="{%static 'css/style-ar.css'%}">
+    {% endif %}
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
@@ -70,6 +78,31 @@ function changeAmount(){
         </nav>
     </header>
     {%else%}
+     <header id="lari-header" class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+            <a class="navbar-brand" href="{%url 'home'%}">
+                <img src="{%static 'images/logo-1.png'%}" alt="Lari Exchange">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="ml-auto my-2 my-lg-0 d-flex align-items-center">
+                    <div class="login-button dis-inline">
+                        <a class="btn btn-primary" href="https://www.online.paymaxuae.com/" target="_blank">تسجيل الدخول</a>
+                    </div>
+                    <div class="language-switcher dis-inline">
+                        <a href="{%url 'lang'%}">ENG<i class="fas fa-globe"></i></a>
+                    </div>
+                    <div class="dis-inline">
+                        <div id="toggle" class="button_container">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     {%endif%}
     {% block content %}     
     {% endblock content %}
@@ -173,6 +206,102 @@ function changeAmount(){
         </nav>
     </div>
     {%else%}
+        <footer id="lari-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-footer">
+                        <div class="white-logo">
+                            <img src="{% static 'images/logo-1-wht.png' %}" alt="" class="wow fadeInUp" data-wow-duration="1s"
+                                data-wow-delay="0s">
+                        </div>
+                        <p class="about-footer-desc wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+                            هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز
+                            على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                            ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="useful-links">
+                        <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".75s">روابط هامة</h6>
+                        <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <li><a href="{%url 'privacy'%}">سياسة الخصوصية</a></li>
+                            <li><a href="{%url 'use'%}">شروط الإستخدام</a></li>
+                            <li><a href = "{%url 'condition'%}">الشروط والأحكام</a></li>
+                            <li><a href="">أسعار الصرف</a></li>
+                            <li><a href="{%url 'faq'%}">الاسئلة الشائعة</a></li>
+                            <li><a href="{%url 'contact'%}">إتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="download-app-social">
+                        <div class="download">
+                            <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.25s">تحميل التطبيق</h6>
+                            <div class="download-stores wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                                <div class="stores">
+                                    <a href="https://apps.apple.com/ae/app/paymax/id951789652"><img src="{%static 'images/App-img/appstore.png'%}" alt=""></a>
+                                </div>
+                                <div class="stores">
+                                    <a href="https://play.google.com/store/apps/details?id=ae.s4m.paymax"><img src="{% static 'images/App-img/android.png'%}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/LariExchangeUAE" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.75s"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/LariExchangeUAE" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <a href="http://linkedin.com/company/LariExchangeUAE" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.25s"><i
+                                    class="fab fa-linkedin-square"></i></a>
+                            <a href="https://www.instagram.com/LariExchangeUAE" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/lariexchangeuae" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/00971549966045" target="_blank" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.5s"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="copyright">
+                            <p> 2020 © جميع الحقوق محفوظة لاري للصرافة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay">
+        <div class="menu-logo">
+            <img src="{% static 'images/logo-1-wht.png'%}" alt="">
+        </div>
+        <nav class="overlay-menu">
+            <ul>
+                <li class=><a href="{%url 'home'%}">الرئيسية</a></li>
+                <li class="hoverzone">
+                    <a href="{%url 'aboutmain'%}">عن لاري</a>
+                    <ul class="sub-menu about-submenu">
+                        <li><a href="{%url 'about'%}">عن لاري</a></li>
+                        <li><a href="{%url 'ceo'%}">رسالة من المدير</a></li>
+                        <li><a href="{%url 'mission'%}">الرؤية والمهام</a></li>
+                        <li class="active"><a href="{%url 'technology'%}">التكنولوجيا</a></li>
+                        <li><a href="{%url 'partner'%}">الشركاء</a></li>
+                    </ul>
+                </li>
+                <li class="hoverzone">
+                    <a href="{%url 'products'%}">الخدمات والمنتجات</a>
+                </li>
+                <li><a href="{%url 'news'%}">العروض والاخبار</a></li>
+                <li><a href="{%url 'contact'%}">اتصل بنا</a></li>
+                <li><a href="{%url 'faq'%}">الأسئلة الشائعة</a></li>
+                <li class=><a href="{%url 'branches'%}">الفروع</a></li>
+                <li class=><a href="{%url 'atm'%}">ماكينات الصرف</a></li>
+                <li class=><a href="{%url 'jobs'%}">الوظائف</a></li>
+                <li class=><a href="{%url 'download'%}">مركز التحميل</a></li>
+                <li class=><a href="{%url 'charges'%}">جدول اسعار الصرف</a></li>
+            </ul>
+        </nav>
+    </div>
     {%endif%}
     <!-- start the script -->
 
