@@ -25,8 +25,13 @@ def home_view(request):
     news = news_detail.objects.filter(tag=lang)
     payment = paymentcard_detail.objects.filter(tag=lang)
     products = products_detail.objects.filter(tag=lang)
-    paymax = news_detail.objects.get(title="Paymax Card")
-    travelex = news_detail.objects.get(title="Travelflex cards")
+    if lang=="ar":
+        paymax = news_detail.objects.get(title="بيمكس")
+        travelex = news_detail.objects.get(title="ترافل ماكس")
+    else:
+        paymax = news_detail.objects.get(title="Paymax Card")
+        travelex = news_detail.objects.get(title="Travelflex cards")
+
     if request.method == "POST":
         print(request.POST)
         cal = calculator(request.POST)

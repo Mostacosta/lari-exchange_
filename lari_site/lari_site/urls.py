@@ -56,7 +56,7 @@ urlpatterns = [
     path('branches',branch_view,name='branches'),
     path('atm',atm_view,name='atm'),
     path('careers',job_view,name='jobs'),
-    path('aboutmain', TemplateView.as_view(template_name='about/about-main.html'),name='aboutmain'),
+    path('aboutmain', about_view,name='aboutmain'),
     path('download', pdf_list,name='download'),
     path('charges', charges_view,name='charges')
 
