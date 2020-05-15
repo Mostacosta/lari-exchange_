@@ -912,13 +912,16 @@ body.overlay-opened {
   font-size: 2.2rem;
 }
 #lari-footer .download-app-social .copyright {
-  margin-top: 20px;
+  text-align: right;
+  bottom: 0;
+  position: absolute;
+  right: 0;
 }
 #lari-footer .download-app-social .copyright p {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
-  padding-top: 10px;
-  padding-left: 10px;
+  float: right;
+  padding-top: 30px;
 }
 
 /**********/
@@ -942,7 +945,7 @@ body.overlay-opened {
 .overlay.open {
   opacity: 0.95;
   visibility: visible;
-  width: 25%;
+  width: 50%;
 }
 .overlay.open li {
   animation: fadeInRight 0.5s ease forwards;
@@ -992,11 +995,6 @@ body.overlay-opened {
 @media (max-height: 750px) {
   .overlay nav {
     font-size: 1.3rem;
-  }
-}
-@media (max-width: 1092px) {
-  .overlay nav {
-    font-size: 16px;
   }
 }
 .overlay ul {
@@ -1922,6 +1920,7 @@ body.overlay-opened {
 .download-page .file-data {
   border-top: 1px solid #f3f3f3;
 }
+
 /* End Download Page*/
 
 /*# sourceMappingURL=style.css.map */

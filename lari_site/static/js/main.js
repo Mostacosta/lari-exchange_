@@ -4,7 +4,7 @@ $(function () {
 
   var winH = $(window).height(),
     navH = $('#lari-header').innerHeight();
-  $('#lari-carousel, .carousel-item').height(winH - navH);
+  $('#lari-carousel, .carousel-item').height(winH);
 });
 
 // Add background to navbar when scrolled
