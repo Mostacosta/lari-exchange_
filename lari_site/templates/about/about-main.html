@@ -41,12 +41,7 @@
                                 <h4 class="card-title"><a>About Lari</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
-                                    and reliable customer services, we are
-                                    launching "Paymax Mobile" and "Paymax
-                                    Online", a mobile/online application
-                                    services to our customers which are
-                                    absolutely FREE."%}</p>
+                                <p class="card-text">{{about.description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'about'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
@@ -62,12 +57,7 @@
                                 <h4 class="card-title"><a>{% trans "Message from CEO"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
-                                    and reliable customer services, we are
-                                    launching "Paymax Mobile" and "Paymax
-                                    Online", a mobile/online application
-                                    services to our customers which are
-                                    absolutely FREE."%}</p>
+                                <p class="card-text">{{ceo.description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'ceo'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
@@ -83,12 +73,7 @@
                                 <h4 class="card-title"><a>{% trans "Mission & Vision"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
-                                    and reliable customer services, we are
-                                    launching "Paymax Mobile" and "Paymax
-                                    Online", a mobile/online application
-                                    services to our customers which are
-                                    absolutely FREE."%}</p>
+                                <p class="card-text">{{mission.description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'mission'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
@@ -104,12 +89,7 @@
                                 <h4 class="card-title"><a>{% trans "Technology"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
-                                    and reliable customer services, we are
-                                    launching "Paymax Mobile" and "Paymax
-                                    Online", a mobile/online application
-                                    services to our customers which are
-                                    absolutely FREE."%}</p>
+                                <p class="card-text">{{tech.description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'technology'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
@@ -125,12 +105,7 @@
                                 <h4 class="card-title"><a>{% trans "Partners"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{% trans "To meet out the challenges in satisfactory
-                                    and reliable customer services, we are
-                                    launching "Paymax Mobile" and "Paymax
-                                    Online", a mobile/online application
-                                    services to our customers which are
-                                    absolutely FREE."%}</p>
+                                <p class="card-text">{{partner.description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'partner'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
