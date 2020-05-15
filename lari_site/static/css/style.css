@@ -364,9 +364,8 @@ body.overlay-opened {
 
 /*Styling Header*/
 #lari-header {
-  min-height: 100px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  background-color: rgba(255, 255, 255, 0);
   position: fixed;
   z-index: 100;
   transition: all 0.5s ease-in-out;
@@ -378,7 +377,10 @@ body.overlay-opened {
   background: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-  transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#lari-header.scrolled-height {
+  padding: 0;
 }
 #lari-header .navbar {
   background-color: rgba(248, 249, 250, 0) !important;
@@ -387,6 +389,10 @@ body.overlay-opened {
 }
 #lari-header .navbar .navbar-brand img {
   width: 150px;
+  filter: brightness(0) invert(1);
+}
+#lari-header.scrolled-nav .navbar-brand img {
+  filter: none;  
 }
 #lari-header .navbar .login-button a {
   background-color: #f58c29 !important;
@@ -402,6 +408,7 @@ body.overlay-opened {
   margin: 10px;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
+  background-color: #ffffff;
 }
 #lari-header .navbar .navbar-collapse .language-switcher:hover {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
