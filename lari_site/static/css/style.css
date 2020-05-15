@@ -742,7 +742,7 @@ body.overlay-opened {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient( rgba(255, 165, 0, 0), rgba(0, 0, 0, 0.34901960784313724));
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -924,8 +924,10 @@ body.overlay-opened {
 #lari-footer .download-app-social .copyright p {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 10px;
+  float: right;
+  font-size: 13px;
 }
 
 /**********/
@@ -1712,29 +1714,24 @@ body.overlay-opened {
 .faq-info .faq-box .content #accordion .card .card_pagee .h5-md a,
 .faq-info .faq-box .content #accordiontwo .card .card_pagee .h5-md a {
   display: block;
-  background: #404f5e;
+  background: rgba(241, 241, 241, 0.5);
   padding: 10px 15px;
   padding-top: 15px;
-  color: #fff;
+  color: #404f5e;
   font-weight: 400;
   font-size: 1.1rem;
 }
-.faq-info .faq-box .content #accordion .card .card_pagee .h5-md a::after,
-.faq-info .faq-box .content #accordiontwo .card .card_pagee .h5-md a::after {
-  color: #fff;
+.faq-info .faq-box .content #accordion .card .card_pagee .h5-md a[aria-expanded="true"],
+.faq-info .faq-box .content #accordiontwo .card .card_pagee .h5-md a[aria-expanded="true"] {
+  background-color: #404f5e;
+  color: #ffffff;
 }
-.faq-info .faq-box .content #accordion .card .card_pagee .h5-md a.collapsed,
+.faq-info .faq-box .content #accordion .card .card_pagee .h5-md a.collapsed
 .faq-info .faq-box .content #accordiontwo .card .card_pagee .h5-md a.collapsed {
   display: block;
   padding: 14px 30px;
   padding-left: 20px;
   border: 1px solid transparent;
-  background: rgba(241, 241, 241, 0.5);
-  color: #404f5e;
-}
-.faq-info .faq-box .content #accordion .card .card_pagee .h5-md a.collapsed::after,
-.faq-info .faq-box .content #accordiontwo .card .card_pagee .h5-md a.collapsed::after {
-  color: #404f5e !important;
 }
 .faq-info .faq-box .content #accordion .card-body,
 .faq-info .faq-box .content #accordiontwo .card-body {
@@ -1745,20 +1742,14 @@ body.overlay-opened {
   color: #7b7b7b;
   font-size: 0.9rem;
 }
-.faq-info .faq-box .content #accordion [data-toggle=collapse]:after,
-.faq-info .faq-box .content #accordiontwo [data-toggle=collapse]:after {
-  font-family: "FontAwesome";
-  font-weight: 900;
-  content: "";
+.faq-info .faq-box .content #accordion i,
+.faq-info .faq-box .content #accordiontwo i {
   position: absolute;
   font-size: 14px;
   top: 19px;
   right: 15px;
 }
-.faq-info .faq-box .content #accordion [data-toggle=collapse].collapsed:after,
-.faq-info .faq-box .content #accordiontwo [data-toggle=collapse].collapsed:after {
-  content: "";
-}
+
 
 /* Styling Rates Page */
 .rates-info .header {
