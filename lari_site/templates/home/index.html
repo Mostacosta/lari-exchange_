@@ -82,7 +82,7 @@
                 <div class="paymax-content">
                     <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{paymax.title}}</h6>
                     <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{paymax.description|safe|truncatewords:30}}</p>
-                    <a href="{% url 'news_details' pk=paymax.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                    <a href="{% url 'news_details' pk=paymax.pk %}" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".5s">{% trans "Read More"%}</a>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <div class="paymax-content">
                     <h6 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">{{travelex.title}}</h6>
                     <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">{{travelex.description|safe|truncatewords:50}}</p>
-                    <a href="{% url 'news_details' pk=travelex.pk %}" target="_blank" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
+                    <a href="{% url 'news_details' pk=travelex.pk %}" class="btn btn-light waves-effect waves-light wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".5s">{% trans "Read More"%}</a>
                 </div>
             </div>

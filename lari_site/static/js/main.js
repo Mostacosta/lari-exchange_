@@ -4,7 +4,7 @@ $(function () {
 
   var winH = $(window).height(),
     navH = $('#lari-header').innerHeight();
-  $('#lari-carousel, .carousel-item').height(winH - navH);
+  $('#lari-carousel, .carousel-item').height(winH);
 });
 
 // Add background to navbar when scrolled
@@ -14,11 +14,30 @@ $(document).ready(function () {
     scrollTop = $(window).scrollTop();
 
     if (scrollTop >= 100) {
-      $('#lari-header').addClass('scrolled-nav');
+      $('#lari-header').addClass('scrolled-nav scrolled-height');
     } else if (scrollTop < 100) {
-      $('#lari-header').removeClass('scrolled-nav');
+      $('#lari-header').removeClass('scrolled-nav scrolled-height');
     }
   });
+  
+var hover_off = false;
+var hover_count = 1000;
+
+$("#lari-header").mouseover(function() {
+    hover_off = false;
+    $(this).addClass('scrolled-nav');
+});
+
+$("#lari-header").mouseout(function() {
+    hover_off = true;
+    setTimeout(myMouseOut, hover_count);
+});
+
+function myMouseOut() {
+    if (hover_off && scrollTop <= 100) {
+        $("#lari-header").removeClass('scrolled-nav');
+    }
+}
 
   /*Overlay Menu*/
   $('#toggle').click(function () {
