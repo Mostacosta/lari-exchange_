@@ -26,7 +26,7 @@ from products.views import products_view,products_detail_view
 from technology.views import technology_view
 from faq.views import questions_view
 from partners.views import partner_view
-from news.views import news_view,news_details_view
+from news.views import news_view,news_details_view,cards_view
 from rates.views import rates_view
 from django.views.generic import TemplateView
 from branches.views import branch_view
@@ -58,6 +58,7 @@ urlpatterns = [
     path('careers',job_view,name='jobs'),
     path('aboutmain', about_view,name='aboutmain'),
     path('download', pdf_list,name='download'),
-    path('charges', charges_view,name='charges')
+    path('charges', charges_view,name='charges'),
+    path('cards/<int:pk>', cards_view,name='cards')
 
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

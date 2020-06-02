@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 import requests
 from .models import slider_detail,paymentcard_detail
-from news.models import news_detail
+from news.models import news_detail,cards
 from products.models import products_detail
 from .forms import calculator
 from django.http import JsonResponse
@@ -25,12 +25,7 @@ def home_view(request):
     news = news_detail.objects.filter(tag=lang)
     payment = paymentcard_detail.objects.filter(tag=lang)
     products = products_detail.objects.filter(tag=lang)
-    if lang=="ar":
-        paymax = news_detail.objects.get(title="بيمكس")
-        travelex = news_detail.objects.get(title="ترافل ماكس")
-    else:
-        paymax = news_detail.objects.get(title="Paymax Card")
-        travelex = news_detail.objects.get(title="Travelflex cards")
+    cards_ = cards.objects.filter(tag=lang)
 
     if request.method == "POST":
         print(request.POST)
@@ -49,7 +44,7 @@ def home_view(request):
             return JsonResponse(response_data)
 
     return render(request,'home/index.html',{"sliders":sliders,"news":news,"pay":payment[0],"products":products[:3],"form":cal
-    ,"paymax":paymax,"travelex":travelex})
+    ,"cards":cards_})
 
 def change_lang (request):
     lang = request.session.get('lang')
