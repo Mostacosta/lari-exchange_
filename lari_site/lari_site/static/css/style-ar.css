@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900");
+/*Home page*/
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+.navbar-expand-lg .navbar-collapse > div {
+    margin-left: 0 !important;
+}
+.overlay {
+    right: initial;
+    left: 0;
+}
+.overlay nav {
+    text-align: right;
+    padding-right: 40px;
+}
+.overlay .menu-logo img {
+    padding-right: 60px;
+    padding-left: 0;
+}
+.overlay ul li ul.sub-menu.submenu-opened {
+    left: initial;
+    right: calc(100% + 8px);
+}
+.overlay ul li ul.sub-menu.submenu-opened:before {
+    left: initial;
+    transform: rotate(180deg);
+    right: -20px;
+}
+.carousel-item {
+    margin-right: initial;
+}
+#lari-carousel .carousel-item:after {
+    left: 0 ;
+}
+.carousel-caption {
+    left: initial;
+}
+#lari-carousel .carousel-item .carousel-caption {
+    text-align: right;
+}
+.card .card-text.pull-left {
+    float: right;
+}
+#lari-currency-news .promotion-news-event .news-events-cards .card .card-body > a {
+    float: left;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+#lari-paymax .paymax-content {
+    padding-left: 100px;
+    padding-right: 50px;
+}
+
+#lari-paymax .paymax-content:after {
+    left: 20px;
+    right: initial;
+}
+
+
+#lari-footer .download-app-social .download h6,
+#lari-footer .download-app-social .social-media {
+    text-align: right;
+}
+
+/* Pages */
+/*** Page Head ***/
+
+.page-head .breadcrumb {
+    justify-content: flex-end;
+}
+
+.promotions-info .promotions-box .header {
+    border-right: 3px solid #f58c29;
+    border-left: none;
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+#lari-policy .header {
+    text-align: right;
+}
+#lari-products .header,
+#lari-policy .header,
+.faq-info .faq-box .header,
+.about-info .about-box .about-header,
+.ceo-info .ceo-box .ceo-header h6,
+.vmv-sections .header,
+.technology-info .technology-box .header,
+.Partners-info .Partners-box .header
+ {
+    border-right: 3px solid #f58c29;
+    border-left: none;
+    padding-right: 15px;
+    padding-left: 0;  
+}
+.faq-info .faq-box .content #accordion [data-toggle=collapse]:after, .faq-info .faq-box .content #accordiontwo [data-toggle=collapse]:after {
+    right: initial;
+    left: 15px;
+}
+.contact-form-sec.careers .contact-form-box .col:first-child {
+    border-radius: 0px 20px 20px 0px;
+}
+.contact-form-sec .contact-form-box .col:first-child::before {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.contact-info .contactinfo-box .contactinfo-col .icon-circled {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.contact-info .contactinfo-box .contactinfo-col .contactinfo-text {
+    text-align: right;
+}
+
+.contact-form-sec .contact-form-box .col iframe {
+    border-radius: 0px 20px 20px 0px;
+}
+
+#single-service-section .sidebar-section .service-menu .sidebar-title::before {
+    right: 0;
+    left: initial;
+}
+#single-service-section .sidebar-section .service-menu .sidebar-title {
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+.about-info .row > div:first-child {
+    order: 1;
+}
+.about-info .about-box {
+    text-align: right;
+}
+.ceo-info .ceo-box {
+    text-align: right;
+}
+.ceo-info .ceo-box .ceo-header {
+    border-left: none;
+}
+.technology-info .technology-box .header,
+.technology-info .technology-box .content .list-tech p,
+.technology-info .technology-box .content .para-sec .paragraphs p:first-child,
+.Partners-info .Partners-box .content .tab-content .tab-pane p:first-child {
+    text-align: right;
+}
+.Partners-info .Partners-box .content .tab-content .tab-pane .partner-feat li::before {
+    padding-left: 10px;
+    right: -22px;
+    position: absolute;
+    top: 16px;
+    transform: rotate(180deg);
+}
+/*# sourceMappingURL=style-en.css.map */

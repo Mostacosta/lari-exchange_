@@ -19,7 +19,7 @@ from home.views import currency_table,home_view,change_lang
 from django.conf.urls.static import static
 from django.conf import settings
 from contact.views import contact_view,job_view
-from about.views import about_view
+from about.views import about_view,about_details_view
 from ceo.views import ceo_view
 from missionsandvision.views import mission_view
 from products.views import products_view,products_detail_view
@@ -38,7 +38,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name="home"),
     path('contact',contact_view,name="contact"),
-    path('about',about_view,name="about"),
+    path('about',about_details_view,name="about"),
     path('ceo',ceo_view,name="ceo"),
     path('mission',mission_view,name="mission"),
     path('products',products_view,name="products"),

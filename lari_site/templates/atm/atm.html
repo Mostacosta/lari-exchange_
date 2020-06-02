@@ -79,7 +79,7 @@
                                                                                                             <th>{% trans "S No"%}
                                                                                                             </th>
                                                                                                             <th>{% trans "Branch Name"%}
-                                                                                                               
+
                                                                                                             </th>
                                                                                                             <th>{% trans "Address"%}
                                                                                                             </th>
@@ -91,7 +91,7 @@
                                                                                                     <!--Table body-->
                                                                                                     <tbody>
                                                                                                     {%for detail in details%}
-                                                                                                    
+
                                                                                                     {%if detail.city.city == master.city%}
                                                                                                         <tr>
                                                                                                             <td>{{forloop.counter}}</td>
@@ -101,13 +101,13 @@
                                                                                                             </td>
                                                                                                             <td>
                                                                                                                 <a class="popup-gmaps btn"
-                                                                                                                    href={{detail.map}}>
+                                                                                                                    href={{detail.map}} target="_blank">
                                                                                                                     Show
                                                                                                                     Map</a>
                                                                                                             </td>
                                                                                                         </tr>
 
-                                                                                                   
+
                                                                                                     {%endif%}
                                                                                                     {%endfor%}
                                                                                                     </tbody>
