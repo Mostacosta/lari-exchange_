@@ -14,7 +14,7 @@ def about_view (request):
     about_ = get_object_or_404(about_details,tag=lang)
     ceo_ = get_object_or_404(ceo_detail,tag=lang)
     mission_ = get_object_or_404(mission_detail,tag=lang)
-    tech_ = get_object_or_404(mission_detail,tag=lang)
+    tech_ = get_object_or_404(technology_detail,tag=lang)
     partner_ = get_list_or_404(partner,tag=lang)
     return render(request,'about/about-main.html',{'about':about_,"ceo":ceo_,'mission':mission_,'tech':tech_,"partner":partner_[0]})
 

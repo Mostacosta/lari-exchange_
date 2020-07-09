@@ -47,9 +47,9 @@
                             <form method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
-									<label for="job">Apply for the Job:</label>
+									<label for="job">{% trans 'Apply for the Job'%}:</label>
 										<select name="job" id="gender-select">
-											<option value="">--Please choose an option--</option>
+											<option value="">--{% trans 'Please choose an option'%}--</option>
 											<option value="not listed">Not listed</option>
 											{%for job in jobs%}
 											<option value="{{job.job_name}}">{{job.job_name}}</option>
@@ -58,45 +58,45 @@
                                 </div>
 								<div class="form-group">
                                     <input name="info" type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Additional applied job details">
+                                        placeholder=" {% trans 'Additional applied job details'%}">
                                 </div>
 								<div class="form-group">
                                     <input name="name" type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Your Name">
+                                        placeholder="{% trans 'Your Name'%}">
                                 </div>
                                 <div class="form-group">
-									<label for="Gender">Gender</label>
+									<label for="Gender">{% trans 'Gender'%}</label>
 										<select name="gender" id="gender-select">
-											<option value="">--Please choose an option--</option>
-											<option value="Male">Male</option>
-											<option value="Female">Female</option>
+											<option value="">--{% trans 'Please choose an option'%}--</option>
+											<option value="Male">{% trans 'Male'%}</option>
+											<option value="Female">{% trans 'Female'%}</option>
 										</select>
                                 </div>
 								<div class="form-group">
                                     <input name="Date" class="form-control" id="date2"
-                                        aria-describedby="emailHelp" placeholder="Date of birth" onfocus="(this.type='date')">
+                                        aria-describedby="emailHelp" placeholder="{% trans 'Date of birth'%}" onfocus="(this.type='date')">
                                 </div>
                                 <div class="form-group">
                                     <input name="Nationality" type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Nationalty">
+                                        aria-describedby="emailHelp" placeholder="{% trans 'Nationalty'%}">
                                 </div>
                                 <div class="form-group">
                                     <textarea name="Qualifications" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        placeholder="Qualifications"></textarea>
+                                        placeholder="{% trans 'Qualifications'%}"></textarea>
                                 </div>
 								<div class="form-group">
                                     <textarea name="Experience" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        placeholder="Experience"></textarea>
+                                        placeholder="{% trans 'Experience'%}"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <input name="Mobile_Number" type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Mobile Number">
+                                        aria-describedby="emailHelp" placeholder="{% trans 'Mobile Number' %}">
                                 </div>
 								<div class="form-group">
                                     <input name="email" type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Email Address">
+                                        aria-describedby="emailHelp" placeholder="{% trans 'Email Address'%}">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Send</button>
+                                <button type="submit" class="btn btn-primary">{% trans 'Send'%}</button>
                             </form>
                             <div class="message-wrapper">
                                 <div class="message">

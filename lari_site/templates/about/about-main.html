@@ -38,7 +38,7 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>About Lari</a>
+                                <h4 class="card-title"><a>{% trans "About Lari" %}</a>
                                 </h4>
                                 <!-- Text -->
                                 <p class="card-text">{{about.description|safe|truncatewords:30}}</p>
@@ -70,7 +70,7 @@
                             <!-- Card content -->
                             <div class="card-body">
                                 <!-- Title -->
-                                <h4 class="card-title"><a>{% trans "Mission & Vision"%}</a>
+                                <h4 class="card-title"><a>{% trans "Mission"%}</a>
                                 </h4>
                                 <!-- Text -->
                                 <p class="card-text">{{mission.description|safe|truncatewords:30}}</p>
@@ -89,7 +89,7 @@
                                 <h4 class="card-title"><a>{% trans "Technology"%}</a>
                                 </h4>
                                 <!-- Text -->
-                                <p class="card-text">{{tech.description|safe|truncatewords:30}}</p>
+                                <p class="card-text">{{tech.main_description|safe|truncatewords:30}}</p>
                                 <!-- Button -->
                                 <a href="{%url 'technology'%}" class="btn btn-primary">{% trans "More"%}</a>
                             </div>
