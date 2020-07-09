@@ -1197,9 +1197,9 @@ body.overlay-opened {
   border-radius: 50%;
   margin-right: 5px;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
   vertical-align: super;
 }
 .contact-info .contactinfo-box .contactinfo-col .icon-circled i {
@@ -1208,9 +1208,9 @@ body.overlay-opened {
   line-height: inherit;
 }
 .contact-info .contactinfo-box .contactinfo-col .contactinfo-text {
-  text-align: left;
-  display: inline-block;
-  vertical-align: middle;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
 }
 .contact-info .contactinfo-box .contactinfo-col .contactinfo-text h6 {
   font-weight: bold;
