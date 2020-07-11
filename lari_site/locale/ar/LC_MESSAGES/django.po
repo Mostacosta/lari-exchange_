@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-09 12:50+0000\n"
+"POT-Creation-Date: 2020-07-11 17:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,6 +222,10 @@ msgstr "بطاقة باي ماكس "
 #: templates/faq/faq.html:83
 msgid "GCard FAQ"
 msgstr " بطاقة الجي"
+
+#: templates/faq/faq.html:125
+msgid "General FAQ"
+msgstr " اسئلة عامة"
 
 #: templates/home/index.html:48
 msgid "Promotions News & Event"
