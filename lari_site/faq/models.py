@@ -23,3 +23,14 @@ class GCard_questions(models.Model):
     def __str__(self):
         return self.question
 
+class general_questions(models.Model):
+    question = models.CharField(max_length=300)
+    answer = models.TextField()
+    language = (('eng','eng'),
+                   ('ar','ar')
+    )
+    tag = models.CharField(max_length=5,choices=language,default='eng')
+
+    def __str__(self):
+        return self.question
+

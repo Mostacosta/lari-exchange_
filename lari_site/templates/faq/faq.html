@@ -119,7 +119,49 @@
                                     {%endfor%}
                                 </div>
                             </div>
-        </div> </div></div</div>
+        </div> </div></div>
+        <div id="accordiontwo" role="tablist" class="inner_faq_section">
+                        <div class="faq-title">
+                            <h3>{% trans "General FAQ"%} :</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                {% for general in generals%}
+                                <div class="card">
+                                    <!-- Card Title -->
+                                    <div class="card_pagee" role="tab" id="heading{{forloop.counter|add:50}}">
+                                        <h5 class="h5-md">
+                                            <a data-toggle="collapse" href="#collapse{{forloop.counter|add:50}}" role="button"
+                                                aria-controls="collapse{{forloop.counter|add:50}}">
+                                                <i class="fa fa-plus"></i>
+                                                {{general.question}}
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <!-- Card Content -->
+                                    {%if forloop.first%}
+                                    <div id="collapse{{forloop.counter|add:50}}" class="collapse" role="tabpanel"
+                                        aria-labelledby="heading{{forloop.counter|add:50}}" data-parent="#accordiontwo">
+                                        <div class="card-body">
+                                            <div class="card_cntnt">
+                                                <p>{{general.answer}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%else%}
+                                    <div id="collapse{{forloop.counter|add:50}}" class="collapse" role="tabpanel"
+                                        aria-labelledby="heading{{forloop.counter|add:50}}" data-parent="#accordiontwo">
+                                        <div class="card-body">
+                                            <div class="card_cntnt">
+                                                <p>{{general.answer}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%endif%}
+                                    {%endfor%}
+                                </div>
+                            </div>
+        </div> </div></div></div>
     </section>
 
     {% endblock content%}
