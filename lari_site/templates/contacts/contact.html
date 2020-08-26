@@ -103,30 +103,30 @@
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Your Name" name="name" required>
+                                        placeholder="{% trans "Your Name"%}" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Phone" name="phone" required>
+                                        placeholder="{% trans "Phone"%}" name="phone" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Email Address" name="email" required>
+                                        aria-describedby="emailHelp" placeholder="{% trans "Email Address"%}" name="email" required>
                                 </div>
                                   <div class="form-group">
                                     <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>Apply for a product</option>
-                                    <option> Refer a Friend</option>
-                                    <option>Inquiry</option>
-                                    <option>Suggestions</option>
-                                    <option>Complaints</option>
+                                    <option>{% trans "Apply for a product"%}</option>
+                                    <option> {% trans "Refer a Friend"%}</option>
+                                    <option>{% trans "Inquiry"%}</option>
+                                    <option>{% trans "Suggestions"%}</option>
+                                    <option>{% trans "Complaints"%}</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        placeholder="Message" name="message" required></textarea>
+                                        placeholder="{% trans "Message"%}" name="message" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">{% trans "Submit"%}</button>
                             </form>
                             <div class="message-wrapper">
                                 <div class="message">
