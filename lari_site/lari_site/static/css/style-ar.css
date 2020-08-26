@@ -153,4 +153,9 @@ body {
     top: 16px;
     transform: rotate(180deg);
 }
+
+.faq-info .faq-box .content #accordion i, .faq-info .faq-box .content #accordiontwo i {
+    left: 15px;
+    right: initial;
+}
 /*# sourceMappingURL=style-en.css.map */

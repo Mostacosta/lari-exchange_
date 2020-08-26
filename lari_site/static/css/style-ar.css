@@ -94,7 +94,7 @@ body {
     border-right: 3px solid #f58c29;
     border-left: none;
     padding-right: 15px;
-    padding-left: 0;  
+    padding-left: 0;
 }
 .faq-info .faq-box .content #accordion [data-toggle=collapse]:after, .faq-info .faq-box .content #accordiontwo [data-toggle=collapse]:after {
     right: initial;
@@ -112,7 +112,7 @@ body {
     margin-right: 0;
 }
 .contact-info .contactinfo-box .contactinfo-col .contactinfo-text {
-    text-align: right;
+    text-align: center;
 }
 
 .contact-form-sec .contact-form-box .col iframe {
